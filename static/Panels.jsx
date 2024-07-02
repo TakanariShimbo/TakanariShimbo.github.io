@@ -31,7 +31,7 @@ const Panel = ({ title, description, siteLink, repoLink, imageSrc }) => {
                 <path d="M12 5l7 7-7 7"></path>
               </svg>
             </a>
-            <a class="mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 hover:text-green-400" href={repoLink}>
+            <a class="mr-3 inline-flex items-center ml-auto leading-none text-sm pr-3 py-1 hover:text-green-400" href={repoLink}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -60,28 +60,30 @@ const Panel = ({ title, description, siteLink, repoLink, imageSrc }) => {
  */
 export const Panels = () => {
   return (
-    <div className="flex flex-wrap -m-4">
-      <Panel
-        title="Simple Sudoku App"
-        description="A simple Sudoku app powered by OR-Tools, built with FastAPI and React."
-        siteLink="https://simple-sudoku-app.onrender.com/"
-        repoLink="https://github.com/TakanariShimbo/simple-sudoku-app"
-        imageSrc="./data/simple-sudoku-app.png"
-      />
-      <Panel
-        title="Do We Look A Like?"
-        description="A facial similarity detection app powered by InsightFace, built with Streamlit."
-        siteLink="https://do-we-look-alike.streamlit.app/"
-        repoLink="https://github.com/TakanariShimbo/do-we-look-alike"
-        imageSrc="./data/do-we-look-alike.png"
-      />
-      <Panel
-        title="OpenAI API Demo"
-        description="A demo app for the OpenAI API, built with Streamlit (API Key is required)."
-        siteLink="https://openai-api-demo.streamlit.app/"
-        repoLink="https://github.com/TakanariShimbo/openai-api-demo"
-        imageSrc="./data/openai-api-demo.png"
-      />
-    </div>
+    <section className="body-font container px-5 py-24 mx-auto">
+      <div className="flex flex-wrap -m-4">
+        <Panel
+          title="Simple Sudoku App"
+          description="A simple Sudoku app powered by OR-Tools, built with FastAPI and React."
+          siteLink="https://simple-sudoku-app.onrender.com/"
+          repoLink="https://github.com/TakanariShimbo/simple-sudoku-app"
+          imageSrc="./data/simple-sudoku-app.png"
+        />
+        <Panel
+          title="Do We Look A Like?"
+          description="A facial similarity detection app powered by InsightFace, built with Streamlit."
+          siteLink="https://do-we-look-alike.streamlit.app/"
+          repoLink="https://github.com/TakanariShimbo/do-we-look-alike"
+          imageSrc="./data/do-we-look-alike.png"
+        />
+        <Panel
+          title="OpenAI API Demo"
+          description="A demo app for the OpenAI API, built with Streamlit (API Key is required)."
+          siteLink="https://openai-api-demo.streamlit.app/"
+          repoLink="https://github.com/TakanariShimbo/openai-api-demo"
+          imageSrc="./data/openai-api-demo.png"
+        />
+      </div>
+    </section>
   );
 };

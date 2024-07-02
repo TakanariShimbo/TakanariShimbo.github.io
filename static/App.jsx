@@ -8,12 +8,8 @@ import { Footer } from "./Footer.jsx";
 export const App = () => {
   return (
     <>
-      <section className="body-font">
-        <div className="container px-5 py-24 mx-auto">
-          <Header />
-          <Panels />
-        </div>
-      </section>
+      <Header />
+      <Panels />
       <Footer />
     </>
   );
