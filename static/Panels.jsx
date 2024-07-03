@@ -1,18 +1,19 @@
 /**
  * @param {string} title
+ * @param {string} category
  * @param {string} description
  * @param {string} siteLink
  * @param {string} repoLink
  * @param {string} imageSrc
  * @returns {JSX.Element}
  */
-const Panel = ({ title, description, siteLink, repoLink, imageSrc }) => {
+const Panel = ({ title, category, description, siteLink, repoLink, imageSrc }) => {
   return (
     <div className="p-4 md:w-1/3">
       <div className="h-full border-2 border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden">
         <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={imageSrc} alt="blog" />
         <div className="p-6">
-          <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">CATEGORY</h2>
+          <h2 className="tracking-widest text-xs title-font font-medium text-gray-600 mb-1">{category}</h2>
           <h1 className="title-font text-lg font-medium text-gray-900 dark:text-white mb-3">{title}</h1>
           <p className="leading-relaxed mb-3">{description}</p>
           <div className="flex items-center flex-wrap">
@@ -67,6 +68,7 @@ export const Panels = () => {
       <div className="flex flex-wrap -m-4">
         <Panel
           title="Simple Sudoku App"
+          category="OPTIMIZATION"
           description="A simple Sudoku app powered by OR-Tools, built with FastAPI and React."
           siteLink="https://simple-sudoku-app.onrender.com/"
           repoLink="https://github.com/TakanariShimbo/simple-sudoku-app"
@@ -74,6 +76,7 @@ export const Panels = () => {
         />
         <Panel
           title="Do We Look A Like?"
+          category="DEEP LEARNING"
           description="A facial similarity detection app powered by InsightFace, built with Streamlit."
           siteLink="https://do-we-look-alike.streamlit.app/"
           repoLink="https://github.com/TakanariShimbo/do-we-look-alike"
@@ -81,6 +84,7 @@ export const Panels = () => {
         />
         <Panel
           title="OpenAI API Demo"
+          category="GENERATIVE AI"
           description="A demo app for the OpenAI API, built with Streamlit (API Key is required)."
           siteLink="https://openai-api-demo.streamlit.app/"
           repoLink="https://github.com/TakanariShimbo/openai-api-demo"
