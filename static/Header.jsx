@@ -1,15 +1,35 @@
+import { Texts } from "./Texts.js";
+
 /**
  * @param {Object} props
+ * @param {Texts} props.texts
  * @param {"light" | "dark"} props.theme
+ * @param {Function} props.handleChangeLang
  * @param {Function} props.handleChangeTheme
  * @returns {JSX.Element}
  */
-export const Header = ({ theme, handleChangeTheme }) => {
-  const title = "AI Apps Potal Site";
-  const subTitle = "INTRODUCE MY APPS";
-  const description =
-    "Here are the AI web applications I have developed. These applications leverage mathematical optimization, machine learning techniques such as deep learning, and the recently popular generative AI.";
-
+export const Header = ({ texts, theme, handleChangeLang, handleChangeTheme }) => {
+  const langIcon = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="w-5 h-5"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M4 5h7" />
+      <path d="M7 4c0 4.846 0 7 .5 8" />
+      <path d="M10 8.5c0 2.286 -2 4.5 -3.5 4.5s-2.5 -1.135 -2.5 -2c0 -2 1 -3 3 -3s5 .57 5 2.857c0 1.524 -.667 2.571 -2 3.143" />
+      <path d="M12 20l4 -9l4 9" />
+      <path d="M19.1 18h-6.2" />
+    </svg>
+  );
   const themeIcon =
     theme === "dark" ? (
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -36,18 +56,18 @@ export const Header = ({ theme, handleChangeTheme }) => {
       <div className=" body-font bg-gray-100 dark:bg-gray-800 dark:bg-opacity-75">
         <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-            <button onClick={handleChangeTheme} className="hover:text-green-500 dark:hover:text-green-400">
+            <button onClick={handleChangeLang} className="hover:text-green-500 dark:hover:text-green-400">
+              {langIcon}
+            </button>
+            <button onClick={handleChangeTheme} className="ml-3 hover:text-green-500 dark:hover:text-green-400">
               {themeIcon}
             </button>
-            {/* <button onClick={handleChange} className="ml-3 hover:text-green-500 dark:hover:text-green-400">
-              {themeIcon}
-            </button> */}
           </span>
         </div>
         <div className="px-5 pb-12 flex flex-col text-center w-full">
-          <h2 className="text-xs text-green-500 dark:text-green-400 tracking-widest font-medium title-font mb-1">{subTitle}</h2>
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 dark:text-white">{title}</h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">{description}</p>
+          <h2 className="text-xs text-green-500 dark:text-green-400 tracking-widest font-medium title-font mb-1">{texts.subTitle}</h2>
+          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 dark:text-white">{texts.title}</h1>
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">{texts.description}</p>
         </div>
       </div>
     </header>

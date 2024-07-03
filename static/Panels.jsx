@@ -1,3 +1,5 @@
+import { Texts } from "./Texts.js";
+
 /**
  * @param {Object} props
  * @param {string} props.title
@@ -6,9 +8,10 @@
  * @param {string} props.siteLink
  * @param {string} props.repoLink
  * @param {string} props.imageSrc
+ * @param {string} props.gotoSite
  * @returns {JSX.Element}
  */
-const Panel = ({ title, category, description, siteLink, repoLink, imageSrc }) => {
+const Panel = ({ title, category, description, siteLink, repoLink, imageSrc, gotoSite }) => {
   return (
     <div className="p-4 md:w-1/3">
       <div className="h-full border-2 border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden">
@@ -19,7 +22,7 @@ const Panel = ({ title, category, description, siteLink, repoLink, imageSrc }) =
           <p className="leading-relaxed mb-3">{description}</p>
           <div className="flex items-center flex-wrap">
             <a className="text-green-500 dark:text-green-400 inline-flex items-center md:mb-2 lg:mb-0 hover:underline" href={siteLink}>
-              Goto Site
+              {gotoSite}
               <svg
                 className="w-4 h-4 ml-2"
                 viewBox="0 0 24 24"
@@ -61,35 +64,40 @@ const Panel = ({ title, category, description, siteLink, repoLink, imageSrc }) =
 };
 
 /**
+ * @param {Object} props
+ * @param {Texts} props.texts
  * @returns {JSX.Element}
  */
-export const Panels = () => {
+export const Panels = ({ texts }) => {
   return (
     <section className="body-font container px-5 py-24 mx-auto">
       <div className="flex flex-wrap -m-4">
         <Panel
-          title="Simple Sudoku App"
-          category="OPTIMIZATION"
-          description="A simple Sudoku app powered by OR-Tools, built with FastAPI and React."
+          title={texts.sudokuTitle}
+          category={texts.sudokuCategory}
+          description={texts.sudokuDescription}
           siteLink="https://simple-sudoku-app.onrender.com/"
           repoLink="https://github.com/TakanariShimbo/simple-sudoku-app"
           imageSrc="./data/simple-sudoku-app.png"
+          gotoSite={texts.gotoSite}
         />
         <Panel
-          title="Do We Look A Like?"
-          category="DEEP LEARNING"
-          description="A facial similarity detection app powered by InsightFace, built with Streamlit."
+          title={texts.faceSimilarityTitle}
+          category={texts.faceSimilarityCategory}
+          description={texts.faceSimilarityDescription}
           siteLink="https://do-we-look-alike.streamlit.app/"
           repoLink="https://github.com/TakanariShimbo/do-we-look-alike"
           imageSrc="./data/do-we-look-alike.png"
+          gotoSite={texts.gotoSite}
         />
         <Panel
-          title="OpenAI API Demo"
-          category="GENERATIVE AI"
-          description="A demo app for the OpenAI API, built with Streamlit (API Key is required)."
+          title={texts.openaiTitle}
+          category={texts.openaiCategory}
+          description={texts.openaiDescription}
           siteLink="https://openai-api-demo.streamlit.app/"
           repoLink="https://github.com/TakanariShimbo/openai-api-demo"
           imageSrc="./data/openai-api-demo.png"
+          gotoSite={texts.gotoSite}
         />
       </div>
     </section>
