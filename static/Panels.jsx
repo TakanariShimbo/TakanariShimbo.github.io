@@ -9,14 +9,14 @@
 const Panel = ({ title, description, siteLink, repoLink, imageSrc }) => {
   return (
     <div className="p-4 md:w-1/3">
-      <div className="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
+      <div className="h-full border-2 border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden">
         <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={imageSrc} alt="blog" />
         <div className="p-6">
           <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">CATEGORY</h2>
-          <h1 className="title-font text-lg font-medium text-white mb-3">{title}</h1>
+          <h1 className="title-font text-lg font-medium text-gray-900 dark:text-white mb-3">{title}</h1>
           <p className="leading-relaxed mb-3">{description}</p>
           <div className="flex items-center flex-wrap">
-            <a className="text-green-400 inline-flex items-center md:mb-2 lg:mb-0 hover:underline" href={siteLink}>
+            <a className="text-green-500 dark:text-green-400 inline-flex items-center md:mb-2 lg:mb-0 hover:underline" href={siteLink}>
               Goto Site
               <svg
                 className="w-4 h-4 ml-2"
@@ -31,7 +31,10 @@ const Panel = ({ title, description, siteLink, repoLink, imageSrc }) => {
                 <path d="M12 5l7 7-7 7"></path>
               </svg>
             </a>
-            <a class="mr-3 inline-flex items-center ml-auto leading-none text-sm pr-3 py-1 hover:text-green-400" href={repoLink}>
+            <a
+              class="mr-3 inline-flex items-center ml-auto leading-none text-sm pr-3 py-1 hover:text-green-500 dark:hover:text-green-400"
+              href={repoLink}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
