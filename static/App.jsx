@@ -7,10 +7,10 @@ import { Footer } from "./Footer.jsx";
  */
 export const App = () => {
   return (
-    <>
+    <div className="h-screen text-gray-400 bg-gray-900">
       <Header />
       <Panels />
       <Footer />
-    </>
+    </div>
   );
 };

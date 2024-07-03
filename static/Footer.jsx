@@ -6,7 +6,7 @@ export const Footer = () => {
   const qiitaLink = "https://qiita.com/hmkc1220";
   const creatorName = "TakanriShimbo";
   return (
-    <footer className="mb-24">
+    <footer className="pb-24">
       <div className="body-font bg-gray-800 bg-opacity-75">
         <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
           <div className="flex title-font font-medium items-center md:justify-start justify-center text-white">
