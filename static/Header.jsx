@@ -3,7 +3,7 @@
  */
 export const Header = () => {
   const title = "My Apps Potal Site";
-  const subTitle = "INTRODUCE MY SITES";
+  const subTitle = "INTRODUCE MY APPS";
   const description =
     "Here are the AI web applications I have developed. These applications leverage mathematical optimization, machine learning techniques such as deep learning, and the recently popular generative AI.";
   return (

@@ -4,6 +4,7 @@
 export const Footer = () => {
   const repoLink = "https://github.com/TakanariShimbo";
   const qiitaLink = "https://qiita.com/hmkc1220";
+  const creatorName = "TakanriShimbo";
   return (
     <footer className="mb-24">
       <div className="body-font bg-gray-800 bg-opacity-75">
@@ -26,7 +27,7 @@ export const Footer = () => {
             </svg>
             <span className="ml-3 text-xl">Github Pages</span>
           </div>
-          <p className="text-sm sm:ml-6 sm:mt-0 mt-4">TakanariShimbo</p>
+          <p className="text-sm sm:ml-6 sm:mt-0 mt-4">{creatorName}</p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
             <a className="hover:text-green-400" href={repoLink}>
               <svg
