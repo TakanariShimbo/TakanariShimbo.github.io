@@ -1,7 +1,10 @@
 /**
+ * @param {Object} props
+ * @param {"light" | "dark"} props.theme
+ * @param {Function} props.handleChangeTheme
  * @returns {JSX.Element}
  */
-export const Header = ({ handleChangeTheme, theme }) => {
+export const Header = ({ theme, handleChangeTheme }) => {
   const title = "AI Apps Potal Site";
   const subTitle = "INTRODUCE MY APPS";
   const description =

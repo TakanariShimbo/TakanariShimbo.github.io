@@ -1,10 +1,11 @@
 /**
- * @param {string} title
- * @param {string} category
- * @param {string} description
- * @param {string} siteLink
- * @param {string} repoLink
- * @param {string} imageSrc
+ * @param {Object} props
+ * @param {string} props.title
+ * @param {string} props.category
+ * @param {string} props.description
+ * @param {string} props.siteLink
+ * @param {string} props.repoLink
+ * @param {string} props.imageSrc
  * @returns {JSX.Element}
  */
 const Panel = ({ title, category, description, siteLink, repoLink, imageSrc }) => {
