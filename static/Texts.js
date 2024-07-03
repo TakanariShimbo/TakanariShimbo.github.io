@@ -190,4 +190,15 @@ export class Texts {
       return "A demo app for the OpenAI API, built with Streamlit (*API Key is required).";
     }
   }
+
+  /**
+   * @returns {string}
+   */
+  get creatorName() {
+    if (this.isJp) {
+      return "新保 貴也";
+    } else {
+      return "Takanari Shimbo";
+    }
+  }
 }

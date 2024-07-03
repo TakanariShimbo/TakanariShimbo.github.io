@@ -1,10 +1,11 @@
 /**
+ * @param {Object} props
+ * @param {Texts} props.texts
  * @returns {JSX.Element}
  */
-export const Footer = () => {
+export const Footer = ({ texts }) => {
   const repoLink = "https://github.com/TakanariShimbo";
   const qiitaLink = "https://qiita.com/hmkc1220";
-  const creatorName = "TakanriShimbo";
   return (
     <footer className="pb-24">
       <div className="body-font bg-gray-100 dark:bg-gray-800 dark:bg-opacity-75">
@@ -27,7 +28,7 @@ export const Footer = () => {
             </svg>
             <span className="ml-3 text-xl">Github Pages</span>
           </div>
-          <p className="text-sm sm:ml-6 sm:mt-0 mt-4">{creatorName}</p>
+          <p className="text-sm sm:ml-6 sm:mt-0 mt-4">{texts.creatorName}</p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
             <a className="hover:text-green-500 dark:hover:text-green-400" href={repoLink}>
               <svg

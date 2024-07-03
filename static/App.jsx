@@ -7,6 +7,7 @@ import { useState } from "./React";
 
 const INIT_THEME = "dark";
 const INIT_LANG = "en";
+
 /**
  * @returns {JSX.Element}
  */
@@ -29,7 +30,7 @@ export const App = () => {
       <div className="min-h-screen h-full text-gray-600 dark:text-gray-400 dark:bg-gray-900">
         <Header texts={texts} theme={theme} handleChangeLang={handleChangeLang} handleChangeTheme={handleChangeTheme} />
         <Panels texts={texts} />
-        <Footer />
+        <Footer texts={texts} />
       </div>
     </div>
   );
