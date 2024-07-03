@@ -16,7 +16,7 @@ export const App = () => {
 
   return (
     <div className={theme}>
-      <div className="min-h-screen text-gray-600 dark:text-gray-400 dark:bg-gray-900">
+      <div className="min-h-screen h-full text-gray-600 dark:text-gray-400 dark:bg-gray-900">
         <Header handleChangeTheme={handleChangeTheme} theme={theme} />
         <Panels />
         <Footer />
