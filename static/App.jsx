@@ -5,7 +5,13 @@ import { Footer } from "./Footer.jsx";
 
 import { useState } from "./React";
 
-const INIT_LANG = "en";
+/**
+ * @returns {"jp" | "en"}
+ */
+const getInitialLang = () => {
+  const browserLang = navigator.language;
+  return browserLang.startsWith("ja") ? "jp" : "en";
+};
 
 /**
  * @returns {"dark" | "light"}
@@ -22,7 +28,7 @@ export const App = () => {
   /** @type {["light" | "dark", Function]} */
   const [theme, setTheme] = useState(chooseInitialTheme());
   /** @type {[Texts, Function]} */
-  const [texts, setTexts] = useState(new Texts(INIT_LANG));
+  const [texts, setTexts] = useState(new Texts(getInitialLang()));
 
   const handleChangeTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
