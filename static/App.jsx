@@ -5,15 +5,22 @@ import { Footer } from "./Footer.jsx";
 
 import { useState } from "./React";
 
-const INIT_THEME = "dark";
 const INIT_LANG = "en";
+
+/**
+ * @returns {"dark" | "light"}
+ */
+const chooseInitialTheme = () => {
+  const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  return prefersDarkMode ? "dark" : "light";
+};
 
 /**
  * @returns {JSX.Element}
  */
 export const App = () => {
   /** @type {["light" | "dark", Function]} */
-  const [theme, setTheme] = useState(INIT_THEME);
+  const [theme, setTheme] = useState(chooseInitialTheme());
   /** @type {[Texts, Function]} */
   const [texts, setTexts] = useState(new Texts(INIT_LANG));
 
