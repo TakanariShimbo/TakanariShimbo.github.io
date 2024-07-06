@@ -1,6 +1,6 @@
 ## 🚀About
 
-This is the repository of "My Github Pages".
+This is the repository of "My Github Pages".  
 This branch use vite.
 
 https://takanarishimbo.github.io/
