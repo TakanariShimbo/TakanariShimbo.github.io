@@ -1,6 +1,7 @@
 ## 🚀About
 
 This is the repository of "My Github Pages".
+This branch is not standalone (use vite).
 
 https://takanarishimbo.github.io/
 
@@ -11,6 +12,7 @@ https://takanarishimbo.github.io/
 ### Build Server
 
 ```
+cd docs
 python -m http.server 8000
 ```
 
