@@ -1,7 +1,7 @@
 ## 🚀About
 
 This is the repository of "My Github Pages".
-This branch is standalone (import all module as cdn).
+This branch is standalone (import all module as CDN).
 
 https://takanarishimbo.github.io/
 
