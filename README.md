@@ -12,6 +12,7 @@ https://takanarishimbo.github.io/
 ### Build Server
 
 ```
+cd docs
 python -m http.server 8000
 ```
 
