@@ -4,7 +4,7 @@ This is the repository of "My Github Pages".
 
 https://takanarishimbo.github.io/
 
-Developed by Vite + React + Tailwind
+This is developed by Vite + React + Tailwind.
 
 ![VITExREACTxTAILWIND](/README/vite-react-tailwind.png)
 
