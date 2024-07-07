@@ -1,19 +1,23 @@
-## 🚀About
+## 🚀 About
 
-This is the repository of "My Github Pages".  
-This branch use vite.
+This is the repository of "My Github Pages".
 
 https://takanarishimbo.github.io/
 
-## 🐍Test
+## 💻 Check
 
-- python is required
+- require: npm
 
-### Build Server
+```sh
+# install and build
+npm ci
+npm run build
 
+# on vite server
+npm run vite-preview
+
+# on static server
+npm run static-preview
 ```
-cd docs
-python -m http.server 8000
-```
 
-You can check server here(http://localhost:8000/).
+You can check here (http://localhost:8000/) after building server.
