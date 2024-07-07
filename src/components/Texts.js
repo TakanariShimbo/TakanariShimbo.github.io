@@ -1,4 +1,4 @@
-export class Texts {
+class Texts {
   /**
    * @param {"jp" | "en"} lang
    */
@@ -202,3 +202,5 @@ export class Texts {
     }
   }
 }
+
+export default Texts;

@@ -1,7 +1,7 @@
-import { Texts } from "./Texts.js";
-import { Header } from "./Header.jsx";
-import { Panels } from "./Panels.jsx";
-import { Footer } from "./Footer.jsx";
+import Texts from "./components/Texts.js";
+import Header from "./components/Header.jsx";
+import Panels from "./components/Panels.jsx";
+import Footer from "./components/Footer.jsx";
 
 import { useState } from "react";
 

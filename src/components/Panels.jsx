@@ -1,4 +1,4 @@
-import { Texts } from "./Texts.js";
+import Texts from "./Texts.js";
 
 /**
  * @param {Object} props
@@ -68,7 +68,7 @@ const Panel = ({ title, category, description, siteLink, repoLink, imageSrc, got
  * @param {Texts} props.texts
  * @returns {JSX.Element}
  */
-export const Panels = ({ texts }) => {
+const Panels = ({ texts }) => {
   return (
     <section className="body-font container px-5 py-24 mx-auto">
       <div className="flex flex-wrap -m-4">
@@ -103,3 +103,5 @@ export const Panels = ({ texts }) => {
     </section>
   );
 };
+
+export default Panels;
