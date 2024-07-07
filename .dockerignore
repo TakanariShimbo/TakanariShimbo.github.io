@@ -25,3 +25,6 @@ dist-ssr
 
 # Others
 .env
+docs
+README.md
+README
