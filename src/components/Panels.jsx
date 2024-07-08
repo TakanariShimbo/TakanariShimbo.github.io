@@ -1,5 +1,9 @@
 import { Texts } from "./Texts.js";
 
+const sudokuImage = "/src/asserts/simple-sudoku-app.png";
+const faceSimilarityImage = "/src/asserts/do-we-look-alike.png";
+const openaiImage = "/src/asserts/openai-api-demo.png";
+
 /**
  * @param {Object} props
  * @param {string} props.title
@@ -78,7 +82,7 @@ export const Panels = ({ texts }) => {
           description={texts.sudokuDescription}
           siteLink="https://simple-sudoku-app.onrender.com/"
           repoLink="https://github.com/TakanariShimbo/simple-sudoku-app"
-          imageSrc="./data/simple-sudoku-app.png"
+          imageSrc={sudokuImage}
           gotoSite={texts.gotoSite}
         />
         <Panel
@@ -87,7 +91,7 @@ export const Panels = ({ texts }) => {
           description={texts.faceSimilarityDescription}
           siteLink="https://do-we-look-alike.streamlit.app/"
           repoLink="https://github.com/TakanariShimbo/do-we-look-alike"
-          imageSrc="./data/do-we-look-alike.png"
+          imageSrc={faceSimilarityImage}
           gotoSite={texts.gotoSite}
         />
         <Panel
@@ -96,7 +100,7 @@ export const Panels = ({ texts }) => {
           description={texts.openaiDescription}
           siteLink="https://openai-api-demo.streamlit.app/"
           repoLink="https://github.com/TakanariShimbo/openai-api-demo"
-          imageSrc="./data/openai-api-demo.png"
+          imageSrc={openaiImage}
           gotoSite={texts.gotoSite}
         />
       </div>
