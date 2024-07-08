@@ -55,7 +55,7 @@ class Texts {
     if (this.isJp) {
       return "AIアプリ ポータルサイト";
     } else {
-      return "AI Apps Potal Site";
+      return "AI Apps Portal Site";
     }
   }
 
