@@ -1,9 +1,11 @@
+import Texts from "./Texts.js";
+
 /**
  * @param {Object} props
  * @param {Texts} props.texts
  * @returns {JSX.Element}
  */
-export const Footer = ({ texts }) => {
+const Footer = ({ texts }) => {
   const repoLink = "https://github.com/TakanariShimbo";
   const qiitaLink = "https://qiita.com/hmkc1220";
   return (
@@ -69,3 +71,5 @@ export const Footer = ({ texts }) => {
     </footer>
   );
 };
+
+export default Footer;

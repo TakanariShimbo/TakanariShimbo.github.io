@@ -1,4 +1,4 @@
-import { Texts } from "./Texts.js";
+import Texts from "./Texts.js";
 
 /**
  * @param {Object} props
@@ -8,7 +8,7 @@ import { Texts } from "./Texts.js";
  * @param {Function} props.handleChangeTheme
  * @returns {JSX.Element}
  */
-export const Header = ({ texts, theme, handleChangeLang, handleChangeTheme }) => {
+const Header = ({ texts, theme, handleChangeLang, handleChangeTheme }) => {
   const langIcon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -73,3 +73,5 @@ export const Header = ({ texts, theme, handleChangeLang, handleChangeTheme }) =>
     </header>
   );
 };
+
+export default Header;

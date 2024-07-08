@@ -1,7 +1,7 @@
-import { Texts } from "./components/Texts.js";
-import { Header } from "./components/Header.jsx";
-import { Panels } from "./components/Panels.jsx";
-import { Footer } from "./components/Footer.jsx";
+import Texts from "./components/Texts.js";
+import Header from "./components/Header.jsx";
+import Panels from "./components/Panels.jsx";
+import Footer from "./components/Footer.jsx";
 
 import { useState } from "./React";
 
@@ -24,7 +24,7 @@ const chooseInitialTheme = () => {
 /**
  * @returns {JSX.Element}
  */
-export const App = () => {
+const App = () => {
   /** @type {["light" | "dark", Function]} */
   const [theme, setTheme] = useState(chooseInitialTheme());
   /** @type {[Texts, Function]} */
@@ -48,3 +48,5 @@ export const App = () => {
     </div>
   );
 };
+
+export default App;
