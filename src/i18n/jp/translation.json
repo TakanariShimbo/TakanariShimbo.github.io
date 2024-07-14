@@ -1,0 +1,147 @@
+{
+  "basic_info": {
+    "name": "Takanari Shimbo",
+    "titles": [
+      "Machine Learning",
+      "Data Science",
+      "Computer Vision",
+      "Optimization",
+      "Web Development"
+    ]
+  },
+  "about_me": {
+    "title": "ABOUT ME",
+    "greeting": "Hi :) ",
+    "content": "新保貴也です。職場では、AIやDXを推進するチームを牽引しており、機械学習や最適化を活用した社内の生産設備や業務用アプリを開発しています。機械学習では、テーブルデータや画像データを入力とする、クラス分類や回帰、異常検知等のタスクを扱っています。また、近年話題の生成AIを用いたアプリも開発しています。最近は、業務プロセス効率化のために、データドリブンでない最適化AIを扱っています。",
+    "image": "myProfile.jpg"
+  },
+  "projects": {
+    "title": "MY APPS",
+    "projects": [
+      {
+        "title": "シンプル数独アプリ",
+        "category": "optimization",
+        "description": "ロジック部に OR-Tools を用いた数独アプリです。Fast API, Vite で構築しました。ホストサーバーには Render を利用しています。",
+        "images": [
+          "images/portfolio/simple-sudoku-app/p1.jpg",
+          "images/portfolio/simple-sudoku-app/p2.jpg"
+        ],
+        "url": "https://github.com",
+        "technologies": [
+          {
+            "class": "simple-icons:render",
+            "name": "Render"
+          },
+          {
+            "class": "devicon:fastapi",
+            "name": "FastAPI"
+          },
+          {
+            "class": "devicon:vitejs",
+            "name": "Vite"
+          },
+          {
+            "class": "devicon:google",
+            "name": "OR-Tools"
+          }
+        ]
+      },
+      {
+        "title": "私たちって似てる？",
+        "category": "deep learning",
+        "description": "Insight Face を活用した顔の類似度を判定するアプリです。Streamlit で構築しました。ホストサーバーには Streamlit Community Cloud を利用しています。",
+        "images": [
+          "images/portfolio/do-we-look-alike/p1.jpg",
+          "images/portfolio/do-we-look-alike/p2.jpg"
+        ],
+        "url": "https://github.com",
+        "technologies": [
+          {
+            "class": "devicon:streamlit",
+            "name": "Streamlit"
+          },
+          {
+            "class": "icon-park-outline:ios-face-recognition",
+            "name": "InsightFace"
+          }
+        ]
+      },
+      {
+        "title": "OpenAI API デモ",
+        "category": "generative ai",
+        "description": "OpenAI API のデモアプリ（利用には API KEY が必要）です。Streamlit で構築しました。ホストサーバーには Streamlit Community Cloud を利用しています。",
+        "images": [
+          "images/portfolio/openai-api-demo/p1.jpg",
+          "images/portfolio/openai-api-demo/p2.jpg"
+        ],
+        "url": "https://github.com",
+        "technologies": [
+          {
+            "class": "devicon:streamlit",
+            "name": "Streamlit"
+          },
+          {
+            "class": "ri:openai-fill",
+            "name": "OpenAI API"
+          }
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "SKILLS",
+    "icons": [
+      {
+        "name": "Machine Learning",
+        "class": "carbon:machine-learning-model",
+        "level": "50"
+      },
+      {
+        "name": "Data Science",
+        "class": "fluent:data-line-24-filled",
+        "level": "50"
+      },
+      {
+        "name": "Computer Vision",
+        "class": "hugeicons:vision",
+        "level": "50"
+      },
+      {
+        "name": "Optimization",
+        "class": "clarity:process-on-vm-line",
+        "level": "50"
+      },
+      {
+        "name": "Web Development",
+        "class": "mdi:code-block-html",
+        "level": "50"
+      }
+    ]
+  },
+  "experience": {
+    "title": "EXPERIENCE",
+    "experiences": [
+      {
+        "company": "ユニオンツール株式会社",
+        "section": "AI & DX",
+        "years": "9.2022 - present",
+        "icon": "fa6-solid:bore-hole",
+        "technologies": [
+          "光学設計",
+          "深層学習",
+          "生成AI",
+          "ウェブ開発",
+          "データ分析",
+          "最適化"
+        ]
+      },
+      {
+        "company": "日本精機株式会社",
+        "section": "R & D",
+        "years": "04.2020 - 08.2022",
+        "icon": "mdi:car",
+        "technologies": ["外装設計", "光学設計", "画像処理", "深層学習"]
+      }
+    ]
+  }
+}

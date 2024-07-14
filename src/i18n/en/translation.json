@@ -1,0 +1,152 @@
+{
+  "basic_info": {
+    "name": "Takanari Shimbo",
+    "titles": [
+      "Machine Learning",
+      "Data Science",
+      "Computer Vision",
+      "Optimization",
+      "Web Development"
+    ]
+  },
+  "about_me": {
+    "title": "ABOUT ME",
+    "greeting": "Hi :) ",
+    "content": "I'm Takanari Shimbo. At work, I lead a team that promotes AI and DX, developing in-house production equipment and business applications using machine learning and optimization. In machine learning, I handle tasks such as classification, regression, and anomaly detection, using both tabular and image data as inputs. I've also been developing applications using generative AI, which has been a hot topic recently. Lately, I've been working with non-data-driven optimization AI to enhance business process efficiency.",
+    "image": "myProfile.jpg"
+  },
+  "projects": {
+    "title": "MY APPS",
+    "projects": [
+      {
+        "title": "Simple Sudoku App",
+        "category": "optimization",
+        "description": "A simple Sudoku app powered by OR-Tools, built with FastAPI and Vite, hosted on Render.",
+        "images": [
+          "images/portfolio/simple-sudoku-app/p1.jpg",
+          "images/portfolio/simple-sudoku-app/p2.jpg"
+        ],
+        "url": "https://github.com",
+        "technologies": [
+          {
+            "class": "simple-icons:render",
+            "name": "Render"
+          },
+          {
+            "class": "devicon:fastapi",
+            "name": "FastAPI"
+          },
+          {
+            "class": "devicon:vitejs",
+            "name": "Vite"
+          },
+          {
+            "class": "devicon:google",
+            "name": "OR-Tools"
+          }
+        ]
+      },
+      {
+        "title": "Do We Look Alike?",
+        "category": "deep learning",
+        "description": "A facial similarity detection app powered by InsightFace, built with Streamlit, hosted on Streamlit Community Cloud.",
+        "images": [
+          "images/portfolio/do-we-look-alike/p1.jpg",
+          "images/portfolio/do-we-look-alike/p2.jpg"
+        ],
+        "url": "https://github.com",
+        "technologies": [
+          {
+            "class": "devicon:streamlit",
+            "name": "Streamlit"
+          },
+          {
+            "class": "icon-park-outline:ios-face-recognition",
+            "name": "InsightFace"
+          }
+        ]
+      },
+      {
+        "title": "OpenAI API Demo",
+        "category": "generative ai",
+        "description": "A demo app for the OpenAI API (*API Key is required), built with Streamlit, hosted on Streamlit Community Cloud.",
+        "images": [
+          "images/portfolio/openai-api-demo/p1.jpg",
+          "images/portfolio/openai-api-demo/p2.jpg"
+        ],
+        "url": "https://github.com",
+        "technologies": [
+          {
+            "class": "devicon:streamlit",
+            "name": "Streamlit"
+          },
+          {
+            "class": "ri:openai-fill",
+            "name": "OpenAI API"
+          }
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "SKILLS",
+    "icons": [
+      {
+        "name": "Machine Learning",
+        "class": "carbon:machine-learning-model",
+        "level": "50"
+      },
+      {
+        "name": "Data Science",
+        "class": "fluent:data-line-24-filled",
+        "level": "50"
+      },
+      {
+        "name": "Computer Vision",
+        "class": "hugeicons:vision",
+        "level": "50"
+      },
+      {
+        "name": "Optimization",
+        "class": "clarity:process-on-vm-line",
+        "level": "50"
+      },
+      {
+        "name": "Web Development",
+        "class": "mdi:code-block-html",
+        "level": "50"
+      }
+    ]
+  },
+  "experience": {
+    "title": "EXPERIENCE",
+    "experiences": [
+      {
+        "company": "UNION TOOL CO.",
+        "section": "AI & DX",
+        "years": "9.2022 - present",
+        "icon": "fa6-solid:bore-hole",
+        "technologies": [
+          "Optics",
+          "Deep Learning",
+          "Generative AI",
+          "Web Development",
+          "Data Science",
+          "Optimization"
+        ]
+      },
+      {
+        "company": "NIPPON SEIKI CO.",
+        "section": "R & D",
+        "years": "04.2020 - 08.2022",
+        "icon": "mdi:car",
+        "technologies": [
+          "Mechanics",
+          "Optics",
+          "Computer Vision",
+          "Deep Learning"
+        ]
+      }
+    ]
+  }
+}

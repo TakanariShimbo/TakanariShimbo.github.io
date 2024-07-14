@@ -23,5 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-# Others
-.env
+# others
+.yarnrc.yml
+.yarn
