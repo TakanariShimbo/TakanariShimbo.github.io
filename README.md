@@ -26,7 +26,7 @@ Check live demonstration <a href="https://devmahmud.github.io/react-frontend-dev
 
 1. Clone or fork project.
 2. Install required dependencies with `yarn install`.
-3. Remove `homepage` entirely from `package.json` or set it to single dot. 
+3. Remove `homepage` entirely from `package.json` or set it to single dot.
 
 ```json
 // package.json
