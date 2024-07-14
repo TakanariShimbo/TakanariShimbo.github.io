@@ -26,7 +26,8 @@
           "images/portfolio/simple-sudoku-app/p1.jpg",
           "images/portfolio/simple-sudoku-app/p2.jpg"
         ],
-        "url": "https://github.com",
+        "appLink": "https://simple-sudoku-app.onrender.com/",
+        "repoLink": "https://github.com/TakanariShimbo/simple-sudoku-app",
         "technologies": [
           {
             "class": "simple-icons:render",
@@ -54,7 +55,8 @@
           "images/portfolio/do-we-look-alike/p1.jpg",
           "images/portfolio/do-we-look-alike/p2.jpg"
         ],
-        "url": "https://github.com",
+        "appLink": "https://do-we-look-alike.streamlit.app/",
+        "repoLink": "https://github.com/TakanariShimbo/do-we-look-alike",
         "technologies": [
           {
             "class": "devicon:streamlit",
@@ -74,7 +76,8 @@
           "images/portfolio/openai-api-demo/p1.jpg",
           "images/portfolio/openai-api-demo/p2.jpg"
         ],
-        "url": "https://github.com",
+        "appLink": "https://openai-api-demo.streamlit.app/",
+        "repoLink": "https://github.com/TakanariShimbo/openai-api-demo",
         "technologies": [
           {
             "class": "devicon:streamlit",

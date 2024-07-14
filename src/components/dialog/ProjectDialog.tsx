@@ -82,6 +82,23 @@ const ProjectDialog = ({ open, onClose, project }: Props) => {
                       </div>
                     ))}
                   </div>
+
+                  <div className="mt-7 flex justify-center gap-5">
+                    <a
+                      href={project?.appLink}
+                      target="_blank"
+                      className=" flex flex-col items-center text-black dark:text-white"
+                    >
+                      <Icon icon="mdi:web" fontSize="40px" />
+                    </a>
+                    <a
+                      href={project?.repoLink}
+                      target="_blank"
+                      className=" flex flex-col items-center text-black dark:text-white"
+                    >
+                      <Icon icon="mdi:github" fontSize="40px" />
+                    </a>
+                  </div>
                 </div>
 
                 <div className="sm:flex sm:items-start">
