@@ -130,6 +130,7 @@
         "years": "9.2022 - present",
         "icon": "fa6-solid:bore-hole",
         "technologies": [
+          "ドリル",
           "光学設計",
           "深層学習",
           "生成AI",
@@ -143,7 +144,13 @@
         "section": "研究開発",
         "years": "04.2020 - 08.2022",
         "icon": "mdi:car",
-        "technologies": ["外装設計", "光学設計", "画像処理", "深層学習"]
+        "technologies": [
+          "ヘッドアップディスプレイ",
+          "外装設計",
+          "光学設計",
+          "画像処理",
+          "深層学習"
+        ]
       },
       {
         "company": "千葉大学",

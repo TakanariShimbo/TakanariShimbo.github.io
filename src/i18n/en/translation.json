@@ -130,6 +130,7 @@
         "years": "9.2022 - present",
         "icon": "fa6-solid:bore-hole",
         "technologies": [
+          "Drill",
           "Optics",
           "Deep Learning",
           "Generative AI",
@@ -144,6 +145,7 @@
         "years": "04.2020 - 08.2022",
         "icon": "mdi:car",
         "technologies": [
+          "Head Up Display",
           "Mechanics",
           "Optics",
           "Computer Vision",
