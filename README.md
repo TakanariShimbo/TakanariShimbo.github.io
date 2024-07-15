@@ -1,4 +1,4 @@
-<a href="https://takanarishimbo.github.io/">
+<a href="https://takanarishimbo.github.io/" target="_blank">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/TakanariShimbo/takanarishimbo.github.io/main/demo/my-page-dark.png" />
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/TakanariShimbo/takanarishimbo.github.io/main/demo/my-page-light.png" />
