@@ -122,7 +122,7 @@
     ]
   },
   "experience": {
-    "title": "EXPERIENCE",
+    "title": "HISTORY",
     "experiences": [
       {
         "company": "ユニオンツール株式会社",
@@ -140,10 +140,37 @@
       },
       {
         "company": "日本精機株式会社",
-        "section": "R & D",
+        "section": "研究開発",
         "years": "04.2020 - 08.2022",
         "icon": "mdi:car",
         "technologies": ["外装設計", "光学設計", "画像処理", "深層学習"]
+      },
+      {
+        "company": "千葉大学",
+        "section": "機械工学",
+        "years": "04.2016 - 03.2020",
+        "icon": "mdi:dolphin",
+        "technologies": [
+          "修士",
+          "イルカの遊泳メカニズム",
+          "生物規範工学",
+          "数値流体解析",
+          "最適化"
+        ]
+      },
+      {
+        "company": "長岡工業高等専門学校",
+        "section": "機械工学",
+        "years": "04.2011 - 03.2016",
+        "icon": "mynaui:snow",
+        "technologies": [
+          "短期大学士",
+          "雪冷房",
+          "熱力学",
+          "流体力学",
+          "材料力学",
+          "機械力学"
+        ]
       }
     ]
   }

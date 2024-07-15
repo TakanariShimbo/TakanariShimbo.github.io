@@ -122,10 +122,10 @@
     ]
   },
   "experience": {
-    "title": "EXPERIENCE",
+    "title": "HISTORY",
     "experiences": [
       {
-        "company": "UNION TOOL CO.",
+        "company": "UNION TOOL CO. LTD.",
         "section": "AI & DX",
         "years": "9.2022 - present",
         "icon": "fa6-solid:bore-hole",
@@ -139,7 +139,7 @@
         ]
       },
       {
-        "company": "NIPPON SEIKI CO.",
+        "company": "NIPPON SEIKI CO. LTD.",
         "section": "R & D",
         "years": "04.2020 - 08.2022",
         "icon": "mdi:car",
@@ -148,6 +148,33 @@
           "Optics",
           "Computer Vision",
           "Deep Learning"
+        ]
+      },
+      {
+        "company": "CHIBA UNIV.",
+        "section": "Mechanics",
+        "years": "04.2016 - 03.2020",
+        "icon": "mdi:dolphin",
+        "technologies": [
+          "Master Degree",
+          "Swimming Mechanism of Dolphin",
+          "Biomimetics",
+          "Computational Fluid Dynamics",
+          "Optimization"
+        ]
+      },
+      {
+        "company": "NAGAOKA N.C.T.",
+        "section": "Mechanics",
+        "years": "04.2011 - 03.2016",
+        "icon": "mynaui:snow",
+        "technologies": [
+          "Associate Degree",
+          "Snow Cooling",
+          "Thermodynamics",
+          "Fluid Dynamics",
+          "Strength of Materials",
+          "Dynamics of Machinary"
         ]
       }
     ]
