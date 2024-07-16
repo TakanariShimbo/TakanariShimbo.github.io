@@ -1,32 +1,29 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 import { ThemeContext } from "../contexts";
 
-export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [darkTheme, setDarkTheme] = useState<boolean>(false);
+const checkPrefersDarkTheme = () => {
+  const prefersDarkTheme =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+  return prefersDarkTheme;
+};
 
-  const toggleTheme = () => {
-    setDarkTheme((curr) => !curr);
+export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
+  const [darkTheme, setDarkTheme] = useState<boolean>(checkPrefersDarkTheme());
+
+  const handleChangeTheme = (toDark: boolean) => {
+    document.body.className = toDark ? "dark" : "light";
+    setDarkTheme(toDark);
   };
 
-  const currentTheme = useMemo(() => localStorage.getItem("theme"), []);
-
   useEffect(() => {
-    if (!currentTheme) {
-      if (
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-      ) {
-        setDarkTheme(true);
-      }
-    } else {
-      setDarkTheme(currentTheme === "dark");
-    }
-  }, [currentTheme]);
+    const matchDarkMedia = checkPrefersDarkTheme();
+    handleChangeTheme(matchDarkMedia);
+  }, []);
 
-  useEffect(() => {
-    localStorage.setItem("theme", darkTheme ? "dark" : "light");
-    document.body.className = darkTheme ? "dark" : "light";
-  }, [darkTheme]);
+  const toggleTheme = () => {
+    handleChangeTheme(!darkTheme);
+  };
 
   return (
     <ThemeContext.Provider value={{ darkTheme, toggleTheme }}>
