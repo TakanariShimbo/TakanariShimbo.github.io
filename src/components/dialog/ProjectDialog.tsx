@@ -63,7 +63,7 @@ const ProjectDialog = ({ open, onClose, project }: Props) => {
                         lineHeight: "200%",
                       }}
                     >
-                      <AwesomeSlider className="w-full" organicArrows={false}>
+                      <AwesomeSlider className="w-full">
                         {project?.images?.map((image) => (
                           <div data-src={image} key={image} />
                         ))}
