@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
+import AwesomeSlider from "react-awesome-slider";
 
 const AboutMe = () => {
   const { t } = useTranslation();
@@ -13,12 +14,11 @@ const AboutMe = () => {
       <div className="flex flex-col items-center justify-center gap-10 px-10 pb-10 md:flex-row md:pb-0">
         <div className="text-center md:w-1/3">
           <div className="mb-[30px] mt-[55px] inline-block p-4 pb-10 shadow-card ">
-            <img
-              src={`images/${t("about_me.image")}`}
-              alt="Profile"
-              height="250px"
-              className="w-[200px]"
-            />
+            <AwesomeSlider className="h-[250px] w-[200px]">
+              {t("about_me.images", { returnObjects: true }).map((image) => (
+                <div data-src={image} key={image} />
+              ))}
+            </AwesomeSlider>
           </div>
         </div>
         <div className="md:w-2/3">
