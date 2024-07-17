@@ -1,6 +1,9 @@
 import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
 import AwesomeSlider from "react-awesome-slider";
+import withAutoplay from "react-awesome-slider/dist/autoplay";
+
+const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const AboutMe = () => {
   const { t } = useTranslation();
@@ -14,11 +17,16 @@ const AboutMe = () => {
       <div className="flex flex-col items-center justify-center gap-10 px-10 pb-10 md:flex-row md:pb-0">
         <div className="text-center md:w-1/3">
           <div className="mb-[30px] mt-[55px] inline-block p-4 pb-10 shadow-card ">
-            <AwesomeSlider className="h-[250px] w-[200px]">
+            <AutoplaySlider
+              className="h-[250px] w-[200px]"
+              play={true}
+              cancelOnInteraction={false}
+              interval={5000}
+            >
               {t("about_me.images", { returnObjects: true }).map((image) => (
                 <div data-src={image} key={image} />
               ))}
-            </AwesomeSlider>
+            </AutoplaySlider>
           </div>
         </div>
         <div className="md:w-2/3">
