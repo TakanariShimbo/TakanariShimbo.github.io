@@ -19,7 +19,7 @@ const Experience = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-yellow px-3 py-10 pb-20 dark:bg-[#494949] md:px-0">
+    <section className="bg-yellow px-3 py-10 pb-20 dark:bg-[#7f7f7f] md:px-0">
       <h2 className="py-10 text-center text-xl font-medium uppercase tracking-widest text-white">
         {t("experience.title")}
       </h2>
@@ -29,7 +29,7 @@ const Experience = () => {
           <VerticalTimelineElement
             key={exp.company}
             date={exp.years}
-            dateClassName="dark:text-white"
+            dateClassName="text-black"
             iconClassName="bg-[#AE944F] text-white dark:bg-[#919191]"
             icon={<Icon icon={exp.icon} />}
             className="dark:brightness-80 dark:filter"
