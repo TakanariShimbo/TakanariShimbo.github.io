@@ -21,7 +21,7 @@ const Projects = () => {
       <h2 className="py-10 text-center text-xl font-medium uppercase tracking-widest text-black">
         {t("projects.title")}
       </h2>
-      <div className="flex flex-wrap justify-center gap-10">
+      <div className="flex flex-wrap justify-center gap-5">
         {t("projects.projects", { returnObjects: true }).map((item) => (
           <div
             className="mb-[30px] inline-block cursor-pointer bg-white p-3 text-center shadow-card transition duration-[0.2] ease-linear hover:scale-[1.01] hover:shadow-card-hover dark:bg-[#6d6d6d]"
@@ -32,7 +32,7 @@ const Projects = () => {
               {item.category}
             </span>
             <img
-              className="relative max-h-[230px]"
+              className="relative aspect-[3/2] max-w-[345px]"
               src={item.images[1]}
               alt="Profile"
             />

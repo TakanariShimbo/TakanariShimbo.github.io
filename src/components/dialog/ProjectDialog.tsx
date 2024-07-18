@@ -27,7 +27,7 @@ const ProjectDialog = ({ open, onClose, project }: Props) => {
         </Transition.Child>
 
         <div className="fixed inset-0 z-10 overflow-y-auto">
-          <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+          <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -56,14 +56,14 @@ const ProjectDialog = ({ open, onClose, project }: Props) => {
                       <Icon icon="twemoji:green-circle" width={10} />
                     </div>
                     <div
-                      className="p-3 text-justify"
+                      className="p-5 text-justify"
                       style={{
                         height: "auto",
                         fontSize: "132%",
                         lineHeight: "200%",
                       }}
                     >
-                      <AwesomeSlider className="w-full">
+                      <AwesomeSlider className="aspect-[3/2] w-full">
                         {project?.images?.map((image) => (
                           <div data-src={image} key={image} />
                         ))}

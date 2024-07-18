@@ -10,18 +10,18 @@ const AboutMe = () => {
 
   return (
     <section className="flex flex-col items-center justify-center p-5 pb-20 dark:bg-[#7f7f7f] md:py-10 md:pb-20">
-      <h2 className="max-w-screen-xl py-10 text-center text-xl font-medium uppercase tracking-widest">
+      <h2 className="py-10 text-center text-xl font-medium uppercase tracking-widest">
         {t("about_me.title")}
       </h2>
 
-      <div className="flex max-w-screen-xl flex-col items-center justify-center gap-10 md:flex-row md:gap-5 md:pb-0">
+      <div className="flex max-w-[1160px] flex-col items-center justify-center gap-10 md:flex-row md:gap-5 md:pb-0">
         <div className="w-full text-center md:w-1/3">
           <div className="inline-block w-full max-w-sm p-4 pb-10 shadow-card">
             <AutoplaySlider
               className="aspect-[4/5] w-full max-w-sm"
               play={true}
               cancelOnInteraction={false}
-              interval={5000}
+              interval={6000}
               bullets={false}
             >
               {t("about_me.images", { returnObjects: true }).map((image) => (
