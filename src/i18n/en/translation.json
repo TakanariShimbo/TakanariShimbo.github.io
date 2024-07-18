@@ -15,6 +15,13 @@
     "content": "I'm Takanari Shimbo. At work, I lead a team that promotes AI and DX, developing in-house production equipment and business applications using machine learning and optimization. In machine learning, I handle tasks such as classification, regression, and anomaly detection, using both tabular and image data as inputs. I've also been developing applications using generative AI, which has been a hot topic recently. Lately, I've been working with non-data-driven optimization AI to enhance business process efficiency.",
     "images": [
       "images/profile/p1.jpg",
+      "images/profile/p21.jpg",
+      "images/profile/p22.jpg",
+      "images/profile/p23.jpg",
+      "images/profile/p24.jpg",
+      "images/profile/p25.jpg",
+      "images/profile/p26.jpg",
+      "images/profile/p27.jpg",
       "images/profile/p2.jpg",
       "images/profile/p3.jpg",
       "images/profile/p4.jpg",
@@ -33,14 +40,7 @@
       "images/profile/p17.jpg",
       "images/profile/p18.jpg",
       "images/profile/p19.jpg",
-      "images/profile/p20.jpg",
-      "images/profile/p21.jpg",
-      "images/profile/p22.jpg",
-      "images/profile/p23.jpg",
-      "images/profile/p24.jpg",
-      "images/profile/p25.jpg",
-      "images/profile/p26.jpg",
-      "images/profile/p27.jpg"
+      "images/profile/p20.jpg"
     ]
   },
   "projects": {
