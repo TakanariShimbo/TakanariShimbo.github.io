@@ -8,6 +8,7 @@ declare module "react-awesome-slider/dist/autoplay" {
     play: boolean;
     cancelOnInteraction?: boolean;
     interval?: number;
+    bullets: boolean;
   }
 
   const withAutoplay: (
