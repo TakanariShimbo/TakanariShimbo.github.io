@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="h-[650px] w-[100%] bg-yellow dark:bg-[#494949]">
+      <header className="h-screen w-full bg-yellow dark:bg-[#494949]">
         <div className="flex h-full flex-col items-center justify-center gap-5">
           <div>
             <Icon

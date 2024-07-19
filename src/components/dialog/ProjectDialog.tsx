@@ -55,14 +55,7 @@ const ProjectDialog = ({ open, onClose, project }: Props) => {
                       <Icon icon="twemoji:yellow-circle" width={10} />
                       <Icon icon="twemoji:green-circle" width={10} />
                     </div>
-                    <div
-                      className="p-5 text-justify"
-                      style={{
-                        height: "auto",
-                        fontSize: "132%",
-                        lineHeight: "200%",
-                      }}
-                    >
+                    <div className="text-justify">
                       <AwesomeSlider className="aspect-[3/2] w-full">
                         {project?.images?.map((image) => (
                           <div data-src={image} key={image} />
@@ -72,11 +65,11 @@ const ProjectDialog = ({ open, onClose, project }: Props) => {
                   </div>
 
                   <h2 className="mt-10 text-lg font-bold">{project?.title}</h2>
-                  <p className="text-sm">{project?.description}</p>
+                  <p className="text-sm font-medium">{project?.description}</p>
 
                   <div className="mt-3 flex justify-center gap-5">
                     {project?.technologies?.map((tech) => (
-                      <div className=" flex flex-col items-center text-black dark:text-white">
+                      <div className="flex flex-col items-center text-black dark:text-white">
                         <Icon icon={tech.class} fontSize="50px" />
                         <p className="mt-1 text-center text-xs">{tech.name}</p>
                       </div>
@@ -87,14 +80,14 @@ const ProjectDialog = ({ open, onClose, project }: Props) => {
                     <a
                       href={project?.appLink}
                       target="_blank"
-                      className=" flex flex-col items-center text-black dark:text-white"
+                      className="flex flex-col items-center text-black dark:text-white"
                     >
                       <Icon icon="mdi:web" fontSize="40px" />
                     </a>
                     <a
                       href={project?.repoLink}
                       target="_blank"
-                      className=" flex flex-col items-center text-black dark:text-white"
+                      className="flex flex-col items-center text-black dark:text-white"
                     >
                       <Icon icon="mdi:github" fontSize="40px" />
                     </a>

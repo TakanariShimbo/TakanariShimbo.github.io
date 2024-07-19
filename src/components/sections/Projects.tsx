@@ -32,7 +32,7 @@ const Projects = () => {
               {item.category}
             </span>
             <img
-              className="relative aspect-[3/2] max-w-[345px]"
+              className="relative aspect-[3/2] max-w-[345px] max-[900px]:max-w-md"
               src={item.images[1]}
               alt="Profile"
             />

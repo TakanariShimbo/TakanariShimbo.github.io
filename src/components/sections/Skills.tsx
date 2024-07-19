@@ -10,7 +10,7 @@ const Skills = () => {
         {t("skills.title")}
       </h2>
 
-      <ul className="flex flex-wrap justify-center gap-5 max-[870px]:max-w-xl">
+      <ul className="flex flex-wrap justify-center gap-5 max-[900px]:max-w-xl">
         {t("skills.icons", { returnObjects: true }).map((skill) => (
           <li
             key={skill.name}
