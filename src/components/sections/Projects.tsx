@@ -17,7 +17,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="bg-yellow p-5 pb-10 dark:bg-[#494949] md:py-10 md:pb-20">
+    <section className="bg-yellow p-5 pb-10 dark:bg-[#494949] max-[900px]:py-10 max-[900px]:pb-20">
       <h2 className="py-10 text-center text-xl font-medium uppercase tracking-widest text-black">
         {t("projects.title")}
       </h2>
@@ -32,7 +32,7 @@ const Projects = () => {
               {item.category}
             </span>
             <img
-              className="relative aspect-[3/2] max-w-[345px] max-[900px]:max-w-md"
+              className="relative aspect-[3/2] max-w-[345px] max-[900px]:w-full max-[900px]:max-w-md"
               src={item.images[1]}
               alt="Profile"
             />
