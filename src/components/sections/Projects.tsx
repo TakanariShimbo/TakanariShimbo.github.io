@@ -24,7 +24,7 @@ const Projects = () => {
       <div className="flex flex-wrap justify-center gap-5">
         {t("projects.projects", { returnObjects: true }).map((item) => (
           <div
-            className="mb-[30px] inline-block cursor-pointer bg-white p-3 text-center shadow-card transition duration-[0.2] ease-linear hover:scale-[1.01] hover:shadow-card-hover dark:bg-[#6d6d6d]"
+            className="mb-[30px] inline-block cursor-pointer bg-white p-4 text-center shadow-card transition duration-[0.2] ease-linear hover:scale-[1.01] hover:shadow-card-hover dark:bg-[#6d6d6d]"
             onClick={() => handleProjectDetails(item)}
             key={item.title}
           >

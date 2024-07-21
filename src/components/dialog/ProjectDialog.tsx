@@ -48,7 +48,7 @@ const ProjectDialog = ({ open, onClose, project }: Props) => {
                   </div>
                 </div>
 
-                <div className="mt-2 p-10">
+                <div className="mt-2 p-5">
                   <div className="rounded-sm border border-[rgba(0,0,0,.125)]">
                     <div className="flex items-center gap-3 border-b border-[rgba(0,0,0,.125)] bg-[rgba(0,0,0,0.03)] px-3 py-2">
                       <Icon icon="emojione:red-circle" width={10} />

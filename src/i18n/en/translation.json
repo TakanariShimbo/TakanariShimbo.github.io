@@ -11,8 +11,8 @@
   },
   "about_me": {
     "title": "ABOUT ME",
-    "greeting": "Hi :) ",
-    "content": "I'm Takanari Shimbo. At work, I lead a team that promotes AI and DX, developing in-house production equipment and business applications using machine learning and optimization. In machine learning, I handle tasks such as classification, regression, and anomaly detection, using both tabular and image data as inputs. I've also been developing applications using generative AI, which has been a hot topic recently. Lately, I've been working with non-data-driven optimization AI to enhance business process efficiency.",
+    "hobby_content": "I'm Takanari Shimbo. I was born in Niigata, Japan in 1995 and am 29 years old. My hobbies include playing sports, listening to music, watching videos, and photography. I enjoy playing baseball, tennis, table tennis, and badminton. I often listen to music by GRe4N BOYZ, Mrs. GREEN APPLE, Hikaru Utada, and Perfume. When it comes to videos, I especially enjoy anime such as ONE PIECE, SPY×FAMILY, Haikyuu!!, MAJOR, and Ping Pong, as well as animated films by Mamoru Hosoda, Makoto Shinkai, and Studio Ghibli.",
+    "work_content": "At work, I lead a team that promotes AI and DX. We develop in-house production equipment and business applications using machine learning and optimization techniques. In machine learning, I handle tasks such as classification, regression, and anomaly detection using tabular and image data. Additionally, I have been developing applications using generative AI, which has been gaining a lot of attention recently. Moreover, I am working to improve business process efficiency using optimization AI that is not data-driven.",
     "images": [
       "images/profile/p1.jpg",
       "images/profile/p21.jpg",
