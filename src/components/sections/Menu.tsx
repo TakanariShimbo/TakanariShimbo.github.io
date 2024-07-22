@@ -1,7 +1,15 @@
 import { useState } from "react";
 
-const GithubLink = () => {
+const Menu = () => {
   const githubLink = "https://github.com/TakanariShimbo";
+
+  const navLinks = [
+    { href: "#home", label: "HOME" },
+    { href: "#about-me", label: "ABOUT ME" },
+    { href: "#my-apps", label: "MY APPS" },
+    { href: "#skills", label: "SKILLS" },
+    { href: "#history", label: "HISTORY" },
+  ];
 
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -34,6 +42,7 @@ const GithubLink = () => {
           />
         </svg>
       </a>
+
       <div className="absolute right-0 top-0">
         <button
           onClick={handleMenuToggle}
@@ -71,55 +80,21 @@ const GithubLink = () => {
         }
       >
         <ul className="py-8 text-4xl font-medium uppercase">
-          <li>
-            <a
-              href="#home"
-              className="inline-block py-8"
-              onClick={handleMenuToggle}
-            >
-              HOME
-            </a>
-          </li>
-          <li>
-            <a
-              href="#about-me"
-              className="inline-block py-8"
-              onClick={handleMenuToggle}
-            >
-              ABOUT ME
-            </a>
-          </li>
-          <li>
-            <a
-              href="#my-apps"
-              className="inline-block py-8"
-              onClick={handleMenuToggle}
-            >
-              MY APPS
-            </a>
-          </li>
-          <li>
-            <a
-              href="#skills"
-              className="inline-block py-8"
-              onClick={handleMenuToggle}
-            >
-              SKILLS
-            </a>
-          </li>
-          <li>
-            <a
-              href="#history"
-              className="inline-block py-8"
-              onClick={handleMenuToggle}
-            >
-              HISTORY
-            </a>
-          </li>
+          {navLinks.map((link) => (
+            <li key={link.href}>
+              <a
+                href={link.href}
+                className="inline-block py-8"
+                onClick={handleMenuToggle}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
     </nav>
   );
 };
 
-export default GithubLink;
+export default Menu;

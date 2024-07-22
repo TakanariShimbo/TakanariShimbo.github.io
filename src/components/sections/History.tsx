@@ -15,7 +15,7 @@ const Badge = ({ text }: BadgeProps) => (
   </span>
 );
 
-const Experience = () => {
+const History = () => {
   const { t } = useTranslation();
 
   return (
@@ -24,12 +24,12 @@ const Experience = () => {
       className="flex flex-col items-center justify-center bg-yellow p-5 py-10 pb-20 dark:bg-[#7f7f7f]"
     >
       <h2 className="py-10 text-center text-xl font-medium uppercase tracking-widest text-white">
-        {t("experience.title")}
+        {t("history.title")}
       </h2>
 
       <div className="w-full max-[1170px]:max-w-xl">
         <VerticalTimeline>
-          {t("experience.experiences", { returnObjects: true }).map((exp) => (
+          {t("history.experiences", { returnObjects: true }).map((exp) => (
             <VerticalTimelineElement
               key={exp.company}
               date={exp.years}
@@ -59,4 +59,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default History;
