@@ -10,7 +10,7 @@ interface BadgeProps {
 }
 
 const Badge = ({ text }: BadgeProps) => (
-  <span className="rounded-xl bg-yellow px-[5px] py-[2px] text-sm dark:bg-[#919191] dark:text-white">
+  <span className="rounded-xl bg-yellow px-[5px] py-[2px] text-sm text-black dark:bg-[#919191] dark:text-white">
     {text}
   </span>
 );
@@ -36,12 +36,12 @@ const History = () => {
               dateClassName="text-black"
               iconClassName="bg-[#AE944F] text-white dark:bg-[#919191]"
               icon={<Icon icon={exp.icon} />}
-              className="dark:brightness-80 dark:filter"
+              className="dark:brightness-80 text-black dark:filter"
 
               // contentStyle={{ filter: "brightness(80%)" }}
             >
-              <h3 className="text-lg font-bold">{exp.company}</h3>
-              <h4 className="text-md font-bold">{exp.section}</h4>
+              <h3 className="text-lg font-bold text-black">{exp.company}</h3>
+              <h4 className="text-md font-bold text-black">{exp.section}</h4>
               <div className="mt-2 flex flex-wrap gap-2">
                 {exp.technologies.map((tech) => (
                   <Badge key={tech} text={tech} />

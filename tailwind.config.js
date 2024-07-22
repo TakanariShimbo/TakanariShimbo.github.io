@@ -28,8 +28,8 @@ export default {
       serif: ["Raleway", "serif"],
     },
     colors: {
-      white: "#fff",
-      black: "#000",
+      white: "#ffffff",
+      black: "#151515",
       yellow: "#e9d5a1",
       "gray-dark": "#353239",
       body: "#212529",
