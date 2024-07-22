@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#1f1f1f] py-10 text-center text-white">
       <div className="flex justify-center gap-5">
-        <a href={githubLink} target="_blank">
+        <a href={githubLink} target="_blank" rel="noopener noreferrer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -18,7 +18,7 @@ const Footer = () => {
             />
           </svg>
         </a>
-        <a href={qiitaLink} target="_blank">
+        <a href={qiitaLink} target="_blank" rel="noopener noreferrer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

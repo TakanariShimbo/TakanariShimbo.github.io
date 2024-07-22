@@ -1,14 +1,16 @@
 import { useState } from "react";
 
+import { Link as ScrollLink } from "react-scroll";
+
 const Menu = () => {
   const githubLink = "https://github.com/TakanariShimbo";
 
   const navLinks = [
-    { href: "#home", label: "HOME" },
-    { href: "#about-me", label: "ABOUT ME" },
-    { href: "#my-apps", label: "MY APPS" },
-    { href: "#skills", label: "SKILLS" },
-    { href: "#history", label: "HISTORY" },
+    { to: "home", label: "HOME" },
+    { to: "about-me", label: "ABOUT ME" },
+    { to: "my-apps", label: "MY APPS" },
+    { to: "skills", label: "SKILLS" },
+    { to: "history", label: "HISTORY" },
   ];
 
   const [openMenu, setOpenMenu] = useState(false);
@@ -23,6 +25,7 @@ const Menu = () => {
         href={githubLink}
         className="absolute left-0 scale-x-[-1] scale-y-[1] fill-[#151513] text-white"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <svg
           viewBox="0 0 250 250"
@@ -81,14 +84,16 @@ const Menu = () => {
       >
         <ul className="py-8 text-4xl font-medium uppercase">
           {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className="inline-block py-8"
+            <li key={link.to}>
+              <ScrollLink
+                to={link.to}
+                smooth={true}
+                duration={500}
+                className="inline-block cursor-pointer py-8"
                 onClick={handleMenuToggle}
               >
                 {link.label}
-              </a>
+              </ScrollLink>
             </li>
           ))}
         </ul>
