@@ -23,8 +23,9 @@ npm ci
 # build src
 npm run build
 
-# preview
-npm run preview
+# preview vite or static mode
+npm run vite-preview
+npm run static-preview
 
 # deploy
 npm run deploy

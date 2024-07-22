@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
+    "vite-preview": "vite preview --port 8000 --host",
+    "static-preview": "http-server dist -p 8000 -c-1",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
@@ -15,6 +16,7 @@
     "@fontsource/raleway": "^5.0.19",
     "@headlessui/react": "^2.1.2",
     "clsx": "^2.1.1",
+    "http-server": "^14.1.1",
     "i18next": "^23.12.2",
     "i18next-browser-languagedetector": "^8.0.0",
     "react": "^18.3.1",
