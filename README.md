@@ -18,14 +18,14 @@ require: yarn
 
 ```sh
 # install modules
-yarn install
+npm ci
 
 # build src
-yarn build
+npm run build
 
 # preview
-yarn preview
+npm run preview
 
 # deploy
-yarn deploy
+npm run deploy
 ```
