@@ -14,7 +14,7 @@ Ref: https://github.com/devmahmud/react-frontend-dev-portfolio
 
 ## 💻 Dev
 
-require: yarn
+require: npm
 
 ```sh
 # install modules
