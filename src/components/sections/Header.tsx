@@ -14,8 +14,8 @@ const Header = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <>
-      <header className="h-screen w-full bg-yellow dark:bg-[#494949]">
+    <header id="home">
+      <div className="h-screen min-h-[600px] w-full bg-yellow dark:bg-[#494949]">
         <div className="flex h-full flex-col items-center justify-center gap-5">
           <div>
             <Icon
@@ -64,8 +64,7 @@ const Header = () => {
             }
           />
         </div>
-      </header>
-
+      </div>
       <div className="flex justify-center gap-5 bg-yellow pb-2.5 pt-20 dark:bg-[#494949]">
         <Icon
           className={clsx(
@@ -84,7 +83,7 @@ const Header = () => {
           onClick={() => i18n.changeLanguage("ja")}
         />
       </div>
-    </>
+    </header>
   );
 };
 

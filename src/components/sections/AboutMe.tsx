@@ -9,7 +9,10 @@ const AboutMe = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="flex flex-col items-center justify-center p-5 pb-20 dark:bg-[#7f7f7f] min-[900px]:py-10 min-[900px]:pb-20">
+    <section
+      id="about-me"
+      className="flex flex-col items-center justify-center p-5 pb-20 dark:bg-[#7f7f7f] min-[900px]:py-10 min-[900px]:pb-20"
+    >
       <h2 className="py-10 text-center text-xl font-medium uppercase tracking-widest">
         {t("about_me.title")}
       </h2>

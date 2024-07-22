@@ -17,7 +17,10 @@ const Projects = () => {
   };
 
   return (
-    <section className="bg-yellow p-5 pb-10 dark:bg-[#494949] max-[900px]:py-10 max-[900px]:pb-20">
+    <section
+      id="my-apps"
+      className="bg-yellow p-5 pb-10 dark:bg-[#494949] max-[900px]:py-10 max-[900px]:pb-20"
+    >
       <h2 className="py-10 text-center text-xl font-medium uppercase tracking-widest text-black">
         {t("projects.title")}
       </h2>

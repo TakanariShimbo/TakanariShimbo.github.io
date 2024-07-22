@@ -19,7 +19,10 @@ const Experience = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="flex flex-col items-center justify-center bg-yellow p-5 py-10 pb-20 dark:bg-[#7f7f7f]">
+    <section
+      id="history"
+      className="flex flex-col items-center justify-center bg-yellow p-5 py-10 pb-20 dark:bg-[#7f7f7f]"
+    >
       <h2 className="py-10 text-center text-xl font-medium uppercase tracking-widest text-white">
         {t("experience.title")}
       </h2>

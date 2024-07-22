@@ -5,7 +5,10 @@ const Skills = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="flex flex-col items-center justify-center bg-[#1f1f1f] p-5 pb-20">
+    <section
+      id="skills"
+      className="flex flex-col items-center justify-center bg-[#1f1f1f] p-5 pb-20"
+    >
       <h2 className="py-10 text-center text-xl font-medium uppercase tracking-widest text-white">
         {t("skills.title")}
       </h2>
