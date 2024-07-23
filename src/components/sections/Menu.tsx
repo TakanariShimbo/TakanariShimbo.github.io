@@ -104,7 +104,7 @@ const Menu = () => {
         >
           <div className="flex items-center px-10 py-6">
             <div className="flex-grow border-t border-white"></div>
-            <span className="mx-4 text-4xl font-bold">Menu</span>
+            <span className="mx-4 text-4xl font-bold">MENU</span>
             <div className="flex-grow border-t border-white"></div>
           </div>
           <ul className="py-6 text-xl font-medium uppercase">
