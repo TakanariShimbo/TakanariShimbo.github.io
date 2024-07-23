@@ -96,12 +96,17 @@ const Menu = () => {
           </button>
         </div>
         <div
-          className={`fixed right-0 top-0 h-screen w-full bg-black bg-opacity-90 p-5 text-center text-white transition-transform ease-linear ${
+          className={`fixed flex flex-col items-stretch justify-center right-0 top-0 h-full min-h-screen w-full bg-black bg-opacity-90 p-5 text-center text-white transition-transform ease-linear ${
             openMenu
               ? "translate-y-0 duration-300"
               : "-translate-y-full duration-100"
           }`}
         >
+          <div className="py-8 px-10 flex items-center">
+            <div className="flex-grow border-t border-white"></div>
+            <span className="mx-4 text-4xl font-bold">Menu</span>
+            <div className="flex-grow border-t border-white"></div>
+          </div>
           <ul className="py-8 text-xl font-medium uppercase">
             {navLinks.map((link) => (
               <li key={link.to}>
@@ -117,6 +122,9 @@ const Menu = () => {
               </li>
             ))}
           </ul>
+          <div className="py-8 px-10 flex items-center">
+            <div className="w-full border-t border-white"></div>
+          </div>
         </div>
       </div>
     </nav>

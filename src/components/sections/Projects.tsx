@@ -39,7 +39,7 @@ const Projects = () => {
               src={item.images[1]}
               alt="Profile"
             />
-            <p className="font-xl mt-2 font-bold tracking-wide dark:text-white">
+            <p className="font-xl mt-2 font-medium tracking-wide dark:text-white">
               {item.title}
             </p>
           </div>

@@ -64,7 +64,7 @@ const ProjectDialog = ({ open, onClose, project }: Props) => {
                     </div>
                   </div>
 
-                  <h2 className="mt-10 text-lg font-bold">{project?.title}</h2>
+                  <h2 className="mt-10 text-lg font-medium">{project?.title}</h2>
                   <p className="text-sm font-medium">{project?.description}</p>
 
                   <div className="mt-3 flex justify-center gap-5">

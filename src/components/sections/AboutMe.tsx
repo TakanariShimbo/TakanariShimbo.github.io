@@ -31,7 +31,7 @@ const AboutMe = () => {
                 <div data-src={image} key={image} />
               ))}
             </AutoplaySlider>
-            <p className="font-xl mt-2 font-bold tracking-wide dark:text-white">
+            <p className="font-xl mt-2 font-medium tracking-wide dark:text-white">
               Photo Gallery
             </p>
           </div>

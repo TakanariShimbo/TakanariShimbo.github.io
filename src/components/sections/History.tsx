@@ -40,8 +40,8 @@ const History = () => {
 
               // contentStyle={{ filter: "brightness(80%)" }}
             >
-              <h3 className="text-lg font-bold text-black">{exp.company}</h3>
-              <h4 className="text-md font-bold text-black">{exp.section}</h4>
+              <h3 className="text-lg font-medium text-black">{exp.company}</h3>
+              <h4 className="text-md font-medium text-black">{exp.section}</h4>
               <div className="mt-2 flex flex-wrap gap-2">
                 {exp.technologies.map((tech) => (
                   <Badge key={tech} text={tech} />
