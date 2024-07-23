@@ -1,5 +1,10 @@
 import { Fragment } from "react";
-import { Dialog, Transition } from "@headlessui/react";
+import {
+  Dialog,
+  Transition,
+  TransitionChild,
+  DialogPanel,
+} from "@headlessui/react";
 import { Icon } from "@iconify/react";
 import AwesomeSlider from "react-awesome-slider";
 import { ProjectType } from "@/i18n/config";
@@ -12,9 +17,9 @@ interface Props {
 
 const ProjectDialog = ({ open, onClose, project }: Props) => {
   return (
-    <Transition.Root show={open} as={Fragment}>
+    <Transition show={open} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={onClose}>
-        <Transition.Child
+        <TransitionChild
           as={Fragment}
           enter="ease-out duration-300"
           enterFrom="opacity-0"
@@ -24,11 +29,11 @@ const ProjectDialog = ({ open, onClose, project }: Props) => {
           leaveTo="opacity-0"
         >
           <div className="fixed inset-0 bg-black bg-opacity-75 transition-opacity" />
-        </Transition.Child>
+        </TransitionChild>
 
         <div className="fixed inset-0 z-10 overflow-y-auto">
           <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center">
-            <Transition.Child
+            <TransitionChild
               as={Fragment}
               enter="ease-out duration-300"
               enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
@@ -37,7 +42,7 @@ const ProjectDialog = ({ open, onClose, project }: Props) => {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="relative transform overflow-hidden rounded-sm bg-white text-left shadow-xl transition-all sm:my-8 md:w-[800px] dark:bg-[#919191] dark:text-white">
+              <DialogPanel className="relative transform overflow-hidden rounded-sm bg-white text-left shadow-xl transition-all sm:my-8 md:w-[800px] dark:bg-[#919191] dark:text-white">
                 <div className="flex justify-end">
                   <div className="bg-red-100 mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full sm:mx-0 sm:h-10 sm:w-10">
                     <Icon
@@ -64,7 +69,9 @@ const ProjectDialog = ({ open, onClose, project }: Props) => {
                     </div>
                   </div>
 
-                  <h2 className="mt-10 text-lg font-medium">{project?.title}</h2>
+                  <h2 className="mt-10 text-lg font-medium">
+                    {project?.title}
+                  </h2>
                   <p className="text-sm font-medium">{project?.description}</p>
 
                   <div className="mt-3 flex justify-center gap-5">
@@ -99,12 +106,12 @@ const ProjectDialog = ({ open, onClose, project }: Props) => {
                 <div className="sm:flex sm:items-start">
                   <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left"></div>
                 </div>
-              </Dialog.Panel>
-            </Transition.Child>
+              </DialogPanel>
+            </TransitionChild>
           </div>
         </div>
       </Dialog>
-    </Transition.Root>
+    </Transition>
   );
 };
 
