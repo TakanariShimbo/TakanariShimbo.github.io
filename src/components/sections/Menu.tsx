@@ -1,6 +1,6 @@
 import { useState } from "react";
-
 import { Link as ScrollLink } from "react-scroll";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 const Menu = () => {
   const githubLink = "https://github.com/TakanariShimbo";
@@ -17,6 +17,11 @@ const Menu = () => {
 
   const handleMenuToggle = () => {
     setOpenMenu(!openMenu);
+    if (!openMenu) {
+      disableBodyScroll(document.body);
+    } else {
+      enableBodyScroll(document.body);
+    }
   };
 
   return (
