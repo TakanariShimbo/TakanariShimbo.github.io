@@ -96,7 +96,7 @@ const Menu = () => {
           </button>
         </div>
         <div
-          className={`fixed right-0 top-0 flex h-full min-h-screen w-full flex-col items-stretch justify-center bg-black bg-opacity-90 p-5 text-center text-white transition-transform ease-linear ${
+          className={`fixed right-0 top-0 flex h-full min-h-screen w-full flex-col items-stretch justify-center bg-black bg-opacity-80 p-5 text-center text-white backdrop-blur-md transition-transform ease-linear ${
             openMenu
               ? "translate-y-0 duration-300"
               : "-translate-y-full duration-100"
