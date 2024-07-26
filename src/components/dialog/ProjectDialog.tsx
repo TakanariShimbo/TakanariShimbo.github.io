@@ -8,9 +8,6 @@ import {
 import { Icon } from "@iconify/react";
 import { ProjectType } from "@/i18n/config";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
-import "./custom-theme.css";
 
 interface Props {
   open: boolean;
