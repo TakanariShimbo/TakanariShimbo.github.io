@@ -6,14 +6,26 @@ import {
   DialogPanel,
 } from "@headlessui/react";
 import { Icon } from "@iconify/react";
-import AwesomeSlider from "react-awesome-slider";
 import { ProjectType } from "@/i18n/config";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import "./custom-theme.css";
 
 interface Props {
   open: boolean;
   onClose: () => void;
   project?: ProjectType;
 }
+
+const sliderSettings = {
+  dots: true,
+  speed: 500,
+  arrows: true,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
 
 const ProjectDialog = ({ open, onClose, project }: Props) => {
   return (
@@ -61,11 +73,16 @@ const ProjectDialog = ({ open, onClose, project }: Props) => {
                       <Icon icon="twemoji:green-circle" width={10} />
                     </div>
                     <div className="text-justify">
-                      <AwesomeSlider className="aspect-[3/2] w-full">
+                      <Slider
+                        {...sliderSettings}
+                        className="aspect-[3/2] w-full"
+                      >
                         {project?.images?.map((image) => (
-                          <div data-src={image} key={image} />
+                          <div key={image}>
+                            <img src={image} alt="" />
+                          </div>
                         ))}
-                      </AwesomeSlider>
+                      </Slider>
                     </div>
                   </div>
 

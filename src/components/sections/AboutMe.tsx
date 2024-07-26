@@ -1,17 +1,28 @@
 import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
-import AwesomeSlider from "react-awesome-slider";
-import withAutoplay from "react-awesome-slider/dist/autoplay";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 
-const AutoplaySlider = withAutoplay(AwesomeSlider);
+const sliderSettings = {
+  autoplay: true,
+  autoplaySpeed: 4500,
+  fade: true,
+  waitForAnimate: false,
+  dots: false,
+  speed: 1500,
+  arrows: false,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
 
 const AboutMe = () => {
   const { t } = useTranslation();
-
   return (
     <section
       id="about-me"
-      className="flex flex-col items-center justify-center p-5 pb-20 dark:bg-[#7f7f7f] min-[900px]:py-10 min-[900px]:pb-20"
+      className="flex flex-col items-center justify-center p-5 pb-20 min-[900px]:py-10 min-[900px]:pb-20 dark:bg-[#7f7f7f]"
     >
       <h2 className="py-10 text-center text-xl font-medium uppercase tracking-widest">
         {t("about_me.title")}
@@ -20,17 +31,13 @@ const AboutMe = () => {
       <div className="flex max-w-[1160px] flex-col place-items-stretch gap-10 min-[900px]:flex-row min-[900px]:gap-5 min-[900px]:pb-0">
         <div className="flex w-full max-w-md flex-col justify-center min-[900px]:w-1/3">
           <div className="p-4 text-center shadow-card">
-            <AutoplaySlider
-              className="aspect-[4/5] w-full"
-              play={true}
-              cancelOnInteraction={false}
-              interval={6000}
-              bullets={false}
-            >
+            <Slider {...sliderSettings} className="aspect-[4/5] w-full">
               {t("about_me.images", { returnObjects: true }).map((image) => (
-                <div data-src={image} key={image} />
+                <div key={image}>
+                  <img src={image} alt="" />
+                </div>
               ))}
-            </AutoplaySlider>
+            </Slider>
             <p className="font-xl mt-2 font-medium tracking-wide dark:text-white">
               Photo Gallery
             </p>
