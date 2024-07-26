@@ -26,7 +26,7 @@ const AboutMe = () => {
         {t("about_me.title")}
       </h2>
 
-      <div className="flex max-w-[1160px] flex-col place-items-stretch gap-10 min-[900px]:flex-row min-[900px]:gap-5 min-[900px]:pb-0">
+      <div className="flex max-w-full flex-col place-items-stretch gap-10 min-[900px]:max-w-[1160px] min-[900px]:flex-row min-[900px]:gap-5 min-[900px]:pb-0">
         <div className="flex w-full max-w-md flex-col justify-center min-[900px]:w-1/3">
           <div className="p-4 text-center shadow-card">
             <Slider {...sliderSettings} className="aspect-[4/5] w-full">
