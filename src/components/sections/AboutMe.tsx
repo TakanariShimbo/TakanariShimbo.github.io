@@ -68,6 +68,7 @@ const AboutMe = () => {
     () => ({
       fade: true,
       waitForAnimate: false,
+      swipe: false,
       dots: false,
       speed: 1500,
       arrows: true,
