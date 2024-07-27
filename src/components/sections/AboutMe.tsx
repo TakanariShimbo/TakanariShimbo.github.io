@@ -55,9 +55,9 @@ const AboutMe = () => {
     const interval = setInterval(() => {
       if (sliderRef.current) {
         sliderRef.current.slickNext();
-        setProgress(2);
+        setProgress(0);
       }
-    }, 4500);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, []);
@@ -66,11 +66,11 @@ const AboutMe = () => {
     const timer = setInterval(() => {
       setProgress((prev) => {
         if (prev < 100) {
-          return Math.min(prev + 3, 100);
+          return Math.min(prev + 2, 100);
         }
         return 100;
       });
-    }, 115);
+    }, 100);
 
     return () => clearInterval(timer);
   }, [progress]);
