@@ -1,17 +1,21 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback, useMemo } from "react";
 import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 
 interface ArrowProps {
   onClick?: () => void;
+  resetProgress: () => void;
 }
 
-const PrevArrow = ({ onClick }: ArrowProps) => {
+const PrevArrow = ({ onClick, resetProgress }: ArrowProps) => {
   return (
     <button
       className="absolute left-0 top-0 z-10 flex h-full flex-col justify-center p-2 hover:bg-gradient-to-r hover:from-[#494949]"
-      onClick={onClick}
+      onClick={() => {
+        if (onClick) onClick();
+        resetProgress();
+      }}
     >
       <span className="flex h-10 w-10 items-center justify-center rounded-full text-white">
         <Icon icon="iconamoon:arrow-left-2-bold" fontSize="40px" />
@@ -20,11 +24,14 @@ const PrevArrow = ({ onClick }: ArrowProps) => {
   );
 };
 
-const NextArrow = ({ onClick }: ArrowProps) => {
+const NextArrow = ({ onClick, resetProgress }: ArrowProps) => {
   return (
     <button
       className="absolute right-0 top-0 z-10 flex h-full flex-col justify-center p-2 hover:bg-gradient-to-l hover:from-[#494949]"
-      onClick={onClick}
+      onClick={() => {
+        if (onClick) onClick();
+        resetProgress();
+      }}
     >
       <span className="flex h-10 w-10 items-center justify-center rounded-full text-white">
         <Icon icon="iconamoon:arrow-right-2-bold" fontSize="40px" />
@@ -33,47 +40,45 @@ const NextArrow = ({ onClick }: ArrowProps) => {
   );
 };
 
-const sliderSettings = {
-  fade: true,
-  waitForAnimate: false,
-  dots: false,
-  speed: 1500,
-  arrows: true,
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  prevArrow: <PrevArrow />,
-  nextArrow: <NextArrow />,
-};
-
 const AboutMe = () => {
   const { t } = useTranslation();
   const sliderRef = useRef<Slider>(null);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (sliderRef.current) {
-        sliderRef.current.slickNext();
-        setProgress(0);
-      }
-    }, 6000);
-
-    return () => clearInterval(interval);
-  }, []);
+    if (progress >= 100 && sliderRef.current) {
+      sliderRef.current.slickNext();
+      setProgress(0);
+    }
+  }, [progress]);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setProgress((prev) => {
-        if (prev < 100) {
-          return Math.min(prev + 2, 100);
-        }
-        return 100;
-      });
-    }, 100);
+      setProgress((prev) => Math.min(prev + 2, 100));
+    }, 120);
 
     return () => clearInterval(timer);
-  }, [progress]);
+  }, []);
+
+  const resetProgress = useCallback(() => {
+    setProgress(0);
+  }, []);
+
+  const sliderSettings = useMemo(
+    () => ({
+      fade: true,
+      waitForAnimate: false,
+      dots: false,
+      speed: 1500,
+      arrows: true,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow: <PrevArrow resetProgress={resetProgress} />,
+      nextArrow: <NextArrow resetProgress={resetProgress} />,
+    }),
+    [],
+  );
 
   return (
     <section
