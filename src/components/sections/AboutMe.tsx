@@ -9,21 +9,6 @@ const AboutMe = () => {
   const sliderRef = useRef<Slider>(null);
   const [progress, setProgress] = useState(0);
 
-  useEffect(() => {
-    if (progress >= 100 && sliderRef.current) {
-      sliderRef.current.slickNext();
-      setProgress(0);
-    }
-  }, [progress]);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setProgress((prev) => Math.min(prev + 2, 100));
-    }, 120);
-
-    return () => clearInterval(timer);
-  }, []);
-
   const resetProgress = useCallback(() => {
     setProgress(0);
   }, []);
@@ -58,6 +43,21 @@ const AboutMe = () => {
     }),
     [],
   );
+
+  useEffect(() => {
+    if (progress >= 100 && sliderRef.current) {
+      sliderRef.current.slickNext();
+      resetProgress();
+    }
+  }, [progress]);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setProgress((prev) => Math.min(prev + 2, 100));
+    }, 120);
+
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <section
