@@ -28,7 +28,7 @@ const Menu = () => {
     <nav className="fixed top-0 z-50 w-full bg-gradient-to-b from-gold-500 pb-[90px] transition-all duration-300 dark:from-gray-950">
       <a
         href={githubLink}
-        className="absolute left-0 scale-x-[-1] scale-y-[1] fill-gray-950 text-white"
+        className="absolute left-0 scale-x-[-1] scale-y-[1] fill-gray-950 text-white hover:fill-black"
         target="_blank"
         rel="noopener noreferrer"
       >
