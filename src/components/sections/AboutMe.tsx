@@ -2,43 +2,7 @@ import { useEffect, useState, useRef, useCallback, useMemo } from "react";
 import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
-
-interface ArrowProps {
-  onClick?: () => void;
-  resetProgress: () => void;
-}
-
-const PrevArrow = ({ onClick, resetProgress }: ArrowProps) => {
-  return (
-    <button
-      className="absolute left-0 top-0 z-10 flex h-full flex-col justify-center p-2 hover:bg-gradient-to-r hover:from-[#494949]"
-      onClick={() => {
-        if (onClick) onClick();
-        resetProgress();
-      }}
-    >
-      <span className="flex h-10 w-10 items-center justify-center rounded-full text-white">
-        <Icon icon="iconamoon:arrow-left-2-bold" fontSize="40px" />
-      </span>
-    </button>
-  );
-};
-
-const NextArrow = ({ onClick, resetProgress }: ArrowProps) => {
-  return (
-    <button
-      className="absolute right-0 top-0 z-10 flex h-full flex-col justify-center p-2 hover:bg-gradient-to-l hover:from-[#494949]"
-      onClick={() => {
-        if (onClick) onClick();
-        resetProgress();
-      }}
-    >
-      <span className="flex h-10 w-10 items-center justify-center rounded-full text-white">
-        <Icon icon="iconamoon:arrow-right-2-bold" fontSize="40px" />
-      </span>
-    </button>
-  );
-};
+import CustomArrow from "../slider/CustomArrow";
 
 const AboutMe = () => {
   const { t } = useTranslation();
@@ -75,8 +39,22 @@ const AboutMe = () => {
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
-      prevArrow: <PrevArrow resetProgress={resetProgress} />,
-      nextArrow: <NextArrow resetProgress={resetProgress} />,
+      prevArrow: (
+        <CustomArrow
+          direction="left"
+          beforeGradient={false}
+          afterGradient={true}
+          resetProgress={resetProgress}
+        />
+      ),
+      nextArrow: (
+        <CustomArrow
+          direction="right"
+          beforeGradient={false}
+          afterGradient={true}
+          resetProgress={resetProgress}
+        />
+      ),
     }),
     [],
   );

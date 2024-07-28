@@ -8,6 +8,7 @@ import {
 import { Icon } from "@iconify/react";
 import { ProjectType } from "@/i18n/config";
 import Slider from "react-slick";
+import CustomArrow from "../slider/CustomArrow";
 
 interface DialogProps {
   open: boolean;
@@ -15,45 +16,20 @@ interface DialogProps {
   project?: ProjectType;
 }
 
-interface ArrowProps {
-  onClick?: () => void;
-}
-
-const PrevArrow = ({ onClick }: ArrowProps) => {
-  return (
-    <button
-      className="absolute left-0 top-0 z-10 flex h-full flex-col justify-center bg-gradient-to-r from-[#919191] p-2 hover:from-[#494949]"
-      onClick={onClick}
-    >
-      <span className="flex h-10 w-10 items-center justify-center rounded-full text-white">
-        <Icon icon="iconamoon:arrow-left-2-bold" fontSize="40px" />
-      </span>
-    </button>
-  );
-};
-
-const NextArrow = ({ onClick }: ArrowProps) => {
-  return (
-    <button
-      className="absolute right-0 top-0 z-10 flex h-full flex-col justify-center bg-gradient-to-l from-[#919191] p-2 hover:from-[#494949]"
-      onClick={onClick}
-    >
-      <span className="flex h-10 w-10 items-center justify-center rounded-full text-white">
-        <Icon icon="iconamoon:arrow-right-2-bold" fontSize="40px" />
-      </span>
-    </button>
-  );
-};
-
 const sliderSettings = {
+  swipe: true,
   dots: true,
   speed: 500,
   arrows: true,
   infinite: true,
   slidesToShow: 1,
   slidesToScroll: 1,
-  prevArrow: <PrevArrow />,
-  nextArrow: <NextArrow />,
+  prevArrow: (
+    <CustomArrow direction="left" beforeGradient={true} afterGradient={true} />
+  ),
+  nextArrow: (
+    <CustomArrow direction="right" beforeGradient={true} afterGradient={true} />
+  ),
 };
 
 const ProjectDialog = ({ open, onClose, project }: DialogProps) => {
