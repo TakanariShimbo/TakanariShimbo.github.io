@@ -16,9 +16,9 @@ const CustomArrow = ({
   resetProgress,
 }: ArrowProps) => {
   const isLeft = direction === "left";
-  const beforeGradientFrom = beforeGradient ? "from-gray-400" : "";
+  const beforeGradientFrom = beforeGradient ? "from-gray-500" : "";
   const afterGradientFrom = afterGradient
-    ? "active:from-gray-500 hover:from-gray-500"
+    ? "active:from-gray-900 hover:from-gray-900"
     : "";
   const gradientDirection = isLeft ? "bg-gradient-to-r" : "bg-gradient-to-l";
   const icon = isLeft
