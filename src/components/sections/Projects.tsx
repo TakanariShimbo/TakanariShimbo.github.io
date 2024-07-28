@@ -19,7 +19,7 @@ const Projects = () => {
   return (
     <section
       id="my-apps"
-      className="text-gray-900 bg-ocher-200 dark:bg-gray-800 p-5 pb-10 max-[900px]:py-10 max-[900px]:pb-20 dark:text-white"
+      className="text-gray-900 bg-ocher-200 dark:bg-gray-800 laptop:py-5 laptop:pb-10 px-5 py-10 pb-20 dark:text-white"
     >
       <h2 className="py-10 text-center text-xl font-medium uppercase tracking-widest">
         {t("projects.title")}
@@ -35,7 +35,7 @@ const Projects = () => {
               {item.category}
             </span>
             <img
-              className="relative aspect-[3/2] max-w-[345px] max-[900px]:w-full max-[900px]:max-w-md"
+              className="laptop:max-w-[345px] relative aspect-[3/2] w-full max-w-md"
               src={item.images[1]}
               alt="Profile"
             />

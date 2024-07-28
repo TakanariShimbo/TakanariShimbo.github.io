@@ -62,13 +62,13 @@ const AboutMe = () => {
   return (
     <section
       id="about-me"
-      className="text-gray-900 dark:bg-gray-400 flex flex-col items-center justify-center p-5 pb-20 min-[900px]:py-10 min-[900px]:pb-20 dark:text-white"
+      className="text-gray-900 dark:bg-gray-400 laptop:py-10 laptop:pb-20 flex flex-col items-center justify-center p-5 pb-20 dark:text-white"
     >
       <h2 className="py-10 text-center text-xl font-medium uppercase tracking-widest">
         {t("about_me.title")}
       </h2>
-      <div className="flex max-w-full flex-col place-items-stretch gap-10 min-[900px]:max-w-[1160px] min-[900px]:flex-row min-[900px]:gap-5 min-[900px]:pb-0">
-        <div className="flex w-full max-w-md flex-col justify-center min-[900px]:w-1/3">
+      <div className="laptop:max-w-[1160px] laptop:flex-row laptop:gap-5 laptop:pb-0 flex max-w-full flex-col place-items-stretch gap-10">
+        <div className="laptop:w-1/3 flex w-full max-w-md flex-col justify-center">
           <div className="p-4 text-center shadow-card">
             <Slider
               ref={sliderRef}
@@ -92,7 +92,7 @@ const AboutMe = () => {
             </p>
           </div>
         </div>
-        <div className="flex max-w-md flex-col justify-center rounded-sm border border-[rgba(0,0,0,.125)] min-[900px]:w-2/3 min-[900px]:max-w-full">
+        <div className="laptop:w-2/3 laptop:max-w-full flex max-w-md flex-col justify-center rounded-sm border border-[rgba(0,0,0,.125)]">
           <div className="flex grow-0 items-center gap-3 border-b border-[rgba(0,0,0,.125)] bg-[rgba(0,0,0,0.03)] px-3 py-2">
             <Icon icon="emojione:red-circle" width={10} />
             <Icon icon="twemoji:yellow-circle" width={10} />

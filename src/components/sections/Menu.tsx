@@ -51,7 +51,7 @@ const Menu = () => {
         </svg>
       </a>
 
-      <div className="invisible h-full w-full min-[900px]:visible">
+      <div className="laptop:visible invisible h-full w-full">
         <div className="absolute right-0 top-0">
           <ul className="flex gap-5 px-10 text-xl font-medium uppercase text-white">
             {navLinks.map((link) => (
@@ -70,7 +70,7 @@ const Menu = () => {
         </div>
       </div>
 
-      <div className="visible h-full w-full min-[900px]:invisible">
+      <div className="laptop:invisible visible h-full w-full">
         <div className="absolute right-0 top-0">
           <button
             onClick={handleMenuToggle}

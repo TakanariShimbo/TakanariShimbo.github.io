@@ -27,13 +27,13 @@ const History = () => {
         {t("history.title")}
       </h2>
 
-      <div className="w-full max-[1170px]:max-w-xl">
+      <div className="desktop:max-w-full w-full max-w-xl">
         <VerticalTimeline>
           {t("history.experiences", { returnObjects: true }).map((exp) => (
             <VerticalTimelineElement
               key={exp.company}
               date={exp.years}
-              dateClassName="text-black min-[1170px]:dark:text-white"
+              dateClassName="text-black dark:desktop:text-white"
               iconClassName="bg-gold-500 text-white dark:bg-gray-600"
               icon={<Icon icon={exp.icon} />}
               className="dark:brightness-80 text-gray-900 dark:filter"

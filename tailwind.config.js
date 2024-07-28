@@ -30,6 +30,10 @@ export default {
       sans: ["Raleway", "sans-serif"],
       serif: ["Raleway", "serif"],
     },
+    screens: {
+      laptop: "900px",
+      desktop: "1170px",
+    },
     colors: {
       transparent: "transparent",
       current: "currentColor",
