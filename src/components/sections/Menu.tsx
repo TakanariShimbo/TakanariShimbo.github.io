@@ -25,10 +25,10 @@ const Menu = () => {
   };
 
   return (
-    <nav className="dark:from-gray-950 from-gold-500 fixed top-0 z-50 w-full bg-gradient-to-b pb-[90px] transition-all duration-300">
+    <nav className="fixed top-0 z-50 w-full bg-gradient-to-b from-gold-500 pb-[90px] transition-all duration-300 dark:from-gray-950">
       <a
         href={githubLink}
-        className="fill-gray-950 absolute left-0 scale-x-[-1] scale-y-[1] text-white"
+        className="absolute left-0 scale-x-[-1] scale-y-[1] fill-gray-950 text-white"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -51,7 +51,7 @@ const Menu = () => {
         </svg>
       </a>
 
-      <div className="laptop:visible invisible h-full w-full">
+      <div className="invisible h-full w-full laptop:visible">
         <div className="absolute right-0 top-0">
           <ul className="flex gap-5 px-10 text-xl font-medium uppercase text-white">
             {navLinks.map((link) => (
@@ -60,7 +60,7 @@ const Menu = () => {
                   to={link.to}
                   smooth={true}
                   duration={500}
-                  className="dark:hover:bg-gray-950 hover:bg-gold-500 my-4 inline-block cursor-pointer rounded-md p-4 hover:bg-opacity-20 dark:hover:bg-opacity-20"
+                  className="my-4 inline-block cursor-pointer rounded-md p-4 hover:bg-gold-500 hover:bg-opacity-20 active:bg-gold-500 dark:hover:bg-gray-950 dark:hover:bg-opacity-20 dark:active:bg-gray-950"
                 >
                   {link.label}
                 </ScrollLink>
@@ -70,7 +70,7 @@ const Menu = () => {
         </div>
       </div>
 
-      <div className="laptop:invisible visible h-full w-full">
+      <div className="visible h-full w-full laptop:invisible">
         <div className="absolute right-0 top-0">
           <button
             onClick={handleMenuToggle}
@@ -101,7 +101,7 @@ const Menu = () => {
           </button>
         </div>
         <div
-          className={`bg-gray-950 fixed right-0 top-0 flex h-full min-h-screen w-full flex-col items-stretch justify-center bg-opacity-85 p-5 text-center text-white backdrop-blur-md transition-transform ease-linear ${
+          className={`fixed right-0 top-0 flex h-full min-h-screen w-full flex-col items-stretch justify-center bg-gray-950 bg-opacity-85 p-5 text-center text-white backdrop-blur-md transition-transform ease-linear ${
             openMenu
               ? "translate-y-0 duration-300"
               : "-translate-y-full duration-100"
