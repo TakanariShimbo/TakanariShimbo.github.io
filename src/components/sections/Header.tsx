@@ -15,11 +15,10 @@ const Header = () => {
 
   return (
     <header id="home">
-      <div className="h-[80svh] min-h-[500px] w-full bg-yellow pt-[10svh] dark:bg-[#494949]">
+      <div className="text-gray-900 bg-ocher-200 dark:bg-gray-800 h-[80svh] min-h-[500px] w-full pt-[10svh] dark:text-white">
         <div className="flex h-full flex-col items-center justify-center gap-5">
           <div>
             <Icon
-              className="text-gray-dark"
               icon="la:laptop-code"
               style={{
                 height: "100%",
@@ -28,9 +27,7 @@ const Header = () => {
             />
           </div>
 
-          <h1 className="text-4xl font-bold text-gray-dark dark:text-white">
-            {t("basic_info.name")}
-          </h1>
+          <h1 className="text-4xl font-bold">{t("basic_info.name")}</h1>
 
           <TypeAnimation
             sequence={t("basic_info.titles", { returnObjects: true }).flatMap(
@@ -38,7 +35,7 @@ const Header = () => {
             )}
             wrapper="span"
             speed={50}
-            className="text-regular text-2xl text-gray-dark dark:text-white"
+            className="text-regular text-2xl"
             repeat={Infinity}
           />
 
@@ -52,23 +49,23 @@ const Header = () => {
             height={40}
             uncheckedIcon={
               <Icon
-                className="ml-4 h-full text-end text-[25px] text-gray-dark"
+                className="ml-4 h-full text-end text-[25px]"
                 icon="noto-v1:first-quarter-moon-with-face"
               />
             }
             checkedIcon={
               <Icon
-                className="ml-4 h-full text-end text-[25px] text-gray-dark"
+                className="ml-4 h-full text-end text-[25px]"
                 icon="noto-v1:sun-with-face"
               />
             }
           />
         </div>
       </div>
-      <div className="flex min-h-[20svh] justify-center gap-5 bg-yellow pb-2.5 pt-20 dark:bg-[#494949]">
+      <div className="bg-ocher-200 dark:bg-gray-800 flex min-h-[20svh] justify-center gap-5 pb-2.5 pt-20">
         <Icon
           className={clsx(
-            "h-full cursor-pointer text-[50px] text-gray-dark ",
+            "h-full cursor-pointer text-[50px]",
             i18n.language === "en" && "brightness-50",
           )}
           icon="twemoji:flag-united-states"
@@ -76,7 +73,7 @@ const Header = () => {
         />
         <Icon
           className={clsx(
-            "h-full cursor-pointer text-[50px] text-gray-dark ",
+            "h-full cursor-pointer text-[50px]",
             i18n.language === "ja" && "brightness-50",
           )}
           icon="twemoji:flag-japan"

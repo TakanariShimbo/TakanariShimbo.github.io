@@ -7,9 +7,9 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center justify-center bg-[#1f1f1f] p-5 pb-20"
+      className="bg-gray-950 flex flex-col items-center justify-center p-5 pb-20 text-white"
     >
-      <h2 className="py-10 text-center text-xl font-medium uppercase tracking-widest text-white">
+      <h2 className="py-10 text-center text-xl font-medium uppercase tracking-widest">
         {t("skills.title")}
       </h2>
 
@@ -17,7 +17,7 @@ const Skills = () => {
         {t("skills.icons", { returnObjects: true }).map((skill) => (
           <li
             key={skill.name}
-            className="flex h-[84px] w-[150px] flex-col items-center justify-center rounded-lg bg-[#2A2929] p-[5x] text-white"
+            className="bg-gray-900 flex h-20 w-36 flex-col items-center justify-center rounded-lg p-2"
           >
             <Icon icon={skill.class} className="mx-auto h-10 w-10" />
             <p className="mt-3 text-center text-xs">{skill.name}</p>

@@ -19,19 +19,19 @@ const Projects = () => {
   return (
     <section
       id="my-apps"
-      className="bg-yellow p-5 pb-10 max-[900px]:py-10 max-[900px]:pb-20 dark:bg-[#494949]"
+      className="text-gray-900 bg-ocher-200 dark:bg-gray-800 p-5 pb-10 max-[900px]:py-10 max-[900px]:pb-20 dark:text-white"
     >
-      <h2 className="py-10 text-center text-xl font-medium uppercase tracking-widest text-black">
+      <h2 className="py-10 text-center text-xl font-medium uppercase tracking-widest">
         {t("projects.title")}
       </h2>
       <div className="flex flex-wrap justify-center gap-5">
         {t("projects.projects", { returnObjects: true }).map((item) => (
           <div
-            className="mb-[30px] inline-block cursor-pointer bg-white p-4 text-center shadow-card transition duration-[0.2] ease-linear hover:scale-[1.01] hover:shadow-card-hover dark:bg-[#6d6d6d]"
+            className="dark:bg-gray-500 mb-[30px] inline-block cursor-pointer bg-white p-4 text-center shadow-card transition duration-[0.2] ease-linear hover:scale-[1.01] hover:shadow-card-hover"
             onClick={() => handleProjectDetails(item)}
             key={item.title}
           >
-            <span className="mb-3 rounded-t-lg bg-[#696969] px-4 pb-1 pt-2 text-center text-sm font-medium uppercase text-white">
+            <span className="bg-gray-500 mb-3 rounded-t-lg px-4 pb-1 pt-2 text-center text-sm font-medium uppercase text-white">
               {item.category}
             </span>
             <img
@@ -39,7 +39,7 @@ const Projects = () => {
               src={item.images[1]}
               alt="Profile"
             />
-            <p className="font-xl mt-2 font-medium tracking-wide dark:text-white">
+            <p className="font-xl mt-2 font-medium tracking-wide">
               {item.title}
             </p>
           </div>

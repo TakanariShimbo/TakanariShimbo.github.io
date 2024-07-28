@@ -25,10 +25,10 @@ const Menu = () => {
   };
 
   return (
-    <nav className="fixed top-0 z-50 w-full bg-gradient-to-b from-black pb-[90px] transition-all duration-300">
+    <nav className="dark:from-gray-950 from-gold-500 fixed top-0 z-50 w-full bg-gradient-to-b pb-[90px] transition-all duration-300">
       <a
         href={githubLink}
-        className="absolute left-0 scale-x-[-1] scale-y-[1] fill-black text-white"
+        className="fill-gray-950 absolute left-0 scale-x-[-1] scale-y-[1] text-white"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -53,14 +53,14 @@ const Menu = () => {
 
       <div className="invisible h-full w-full min-[900px]:visible">
         <div className="absolute right-0 top-0">
-          <ul className="flex gap-10 px-10 text-xl font-medium uppercase text-white">
+          <ul className="flex gap-5 px-10 text-xl font-medium uppercase text-white">
             {navLinks.map((link) => (
               <li key={link.to}>
                 <ScrollLink
                   to={link.to}
                   smooth={true}
                   duration={500}
-                  className="inline-block cursor-pointer py-8"
+                  className="dark:hover:bg-gray-950 hover:bg-gold-500 my-4 inline-block cursor-pointer rounded-md p-4 hover:bg-opacity-20 dark:hover:bg-opacity-20"
                 >
                   {link.label}
                 </ScrollLink>
@@ -101,7 +101,7 @@ const Menu = () => {
           </button>
         </div>
         <div
-          className={`fixed right-0 top-0 flex h-full min-h-screen w-full flex-col items-stretch justify-center bg-black bg-opacity-85 p-5 text-center text-white backdrop-blur-md transition-transform ease-linear ${
+          className={`bg-gray-950 fixed right-0 top-0 flex h-full min-h-screen w-full flex-col items-stretch justify-center bg-opacity-85 p-5 text-center text-white backdrop-blur-md transition-transform ease-linear ${
             openMenu
               ? "translate-y-0 duration-300"
               : "-translate-y-full duration-100"

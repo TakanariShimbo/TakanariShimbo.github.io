@@ -62,7 +62,7 @@ const AboutMe = () => {
   return (
     <section
       id="about-me"
-      className="flex flex-col items-center justify-center p-5 pb-20 min-[900px]:py-10 min-[900px]:pb-20 dark:bg-[#7f7f7f]"
+      className="text-gray-900 dark:bg-gray-400 flex flex-col items-center justify-center p-5 pb-20 min-[900px]:py-10 min-[900px]:pb-20 dark:text-white"
     >
       <h2 className="py-10 text-center text-xl font-medium uppercase tracking-widest">
         {t("about_me.title")}
@@ -80,7 +80,7 @@ const AboutMe = () => {
                   <div key={index} className="w-full">
                     <div
                       style={{ width: `${progress}%` }}
-                      className="absolute bottom-0 left-0 h-2 w-10 rounded-lg bg-yellow duration-200 dark:bg-[#494949]"
+                      className="bg-ocher-200 dark:bg-gray-800 absolute bottom-0 left-0 h-2 w-10 rounded-lg duration-200"
                     />
                     <img src={image} alt="" />
                   </div>
@@ -99,13 +99,9 @@ const AboutMe = () => {
             <Icon icon="twemoji:green-circle" width={10} />
           </div>
           <div className="flex grow flex-col justify-center p-3 text-justify">
-            <p className="text-sm font-medium dark:text-white">
-              {t("about_me.hobby_content")}
-            </p>
+            <p className="text-sm font-medium">{t("about_me.hobby_content")}</p>
             <br />
-            <p className="text-sm font-medium dark:text-white">
-              {t("about_me.work_content")}
-            </p>
+            <p className="text-sm font-medium">{t("about_me.work_content")}</p>
           </div>
         </div>
       </div>

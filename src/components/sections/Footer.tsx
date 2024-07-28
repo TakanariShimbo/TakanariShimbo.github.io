@@ -2,7 +2,7 @@ const Footer = () => {
   const githubLink = "https://github.com/TakanariShimbo";
   const qiitaLink = "https://qiita.com/hmkc1220";
   return (
-    <footer className="bg-[#1f1f1f] py-10 text-center text-white">
+    <footer className="bg-gray-950 py-10 text-center text-white">
       <div className="flex justify-center gap-5">
         <a href={githubLink} target="_blank" rel="noopener noreferrer">
           <svg
