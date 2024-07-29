@@ -53,7 +53,7 @@ const ProjectDialog = ({ open, onClose, project }: DialogProps) => {
         </TransitionChild>
 
         <div className="fixed inset-0 z-10 overflow-y-auto">
-          <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center">
+          <div className="flex min-h-full items-end justify-center p-4 pt-24 text-center sm:items-center">
             <TransitionChild
               as={Fragment}
               enter="ease-out duration-300"
@@ -63,7 +63,7 @@ const ProjectDialog = ({ open, onClose, project }: DialogProps) => {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <DialogPanel className="relative transform overflow-hidden rounded-sm bg-white text-left shadow-xl transition-all sm:my-8 md:w-[800px] dark:bg-gray-400 dark:text-white">
+              <DialogPanel className="relative transform overflow-hidden rounded-sm bg-white text-left transition-all sm:my-8 md:w-[800px] dark:bg-gray-400 dark:text-white">
                 <div className="flex justify-end">
                   <div className="bg-red-100 mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full sm:mx-0 sm:h-10 sm:w-10">
                     <Icon

@@ -7,6 +7,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      // animation for left top github link
       keyframes: {
         wave: {
           "0%": { transform: "rotate(0deg)" },
@@ -19,8 +20,9 @@ export default {
       },
       animation: {
         "octo-arm": "wave 500ms ease-in-out infinite",
-        "octo-arm-mobile": "wave 560ms ease-in-out infinite",
       },
+
+      // box shadow
       boxShadow: {
         card: "0 4px 6px rgba(0, 0, 0, 0.3)",
         "card-hover": "0 10px 20px rgba(0,0,0,.7)",

@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <header id="home">
-      <div className="text-gray-900 bg-ocher-200 dark:bg-gray-800 h-[80svh] min-h-[500px] w-full pt-[10svh] dark:text-white">
+      <div className="h-[80svh] min-h-[500px] w-full bg-ocher-200 pt-[10svh] text-gray-900 dark:bg-gray-800 dark:text-white">
         <div className="flex h-full flex-col items-center justify-center gap-5">
           <div>
             <Icon
@@ -62,7 +62,7 @@ const Header = () => {
           />
         </div>
       </div>
-      <div className="bg-ocher-200 dark:bg-gray-800 flex min-h-[20svh] justify-center gap-5 pb-2.5 pt-20">
+      <div className="flex min-h-[20svh] justify-center gap-5 bg-ocher-200 pb-2.5 pt-20 dark:bg-gray-800">
         <Icon
           className={clsx(
             "h-full cursor-pointer text-[50px]",
