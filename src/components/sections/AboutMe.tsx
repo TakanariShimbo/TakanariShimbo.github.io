@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 import CustomArrow from "../slider/CustomArrow";
 
+type LazyLoadTypes = "ondemand" | "progressive" | "anticipated";
+
 const AboutMe = () => {
   const { t } = useTranslation();
   const sliderRef = useRef<Slider>(null);
@@ -15,11 +17,13 @@ const AboutMe = () => {
 
   const sliderSettings = useMemo(
     () => ({
+      lazyLoad: "progressive" as LazyLoadTypes,
       fade: true,
       waitForAnimate: false,
       swipe: false,
       dots: false,
       speed: 1500,
+      initialSlide: 0,
       arrows: true,
       infinite: true,
       slidesToShow: 1,
@@ -62,13 +66,13 @@ const AboutMe = () => {
   return (
     <section
       id="about-me"
-      className="text-gray-900 dark:bg-gray-400 laptop:py-10 laptop:pb-20 flex flex-col items-center justify-center p-5 pb-20 dark:text-white"
+      className="flex flex-col items-center justify-center p-5 pb-20 text-gray-900 laptop:py-10 laptop:pb-20 dark:bg-gray-400 dark:text-white"
     >
       <h2 className="py-10 text-center text-xl font-medium uppercase tracking-widest">
         {t("about_me.title")}
       </h2>
-      <div className="laptop:max-w-[1160px] laptop:flex-row laptop:gap-5 laptop:pb-0 flex max-w-full flex-col place-items-stretch gap-10">
-        <div className="laptop:w-1/3 flex w-full max-w-md flex-col justify-center">
+      <div className="flex max-w-full flex-col place-items-stretch gap-10 laptop:max-w-[1160px] laptop:flex-row laptop:gap-5 laptop:pb-0">
+        <div className="flex w-full max-w-md flex-col justify-center laptop:w-1/3">
           <div className="p-4 text-center shadow-card">
             <Slider
               ref={sliderRef}
@@ -80,7 +84,7 @@ const AboutMe = () => {
                   <div key={index} className="w-full">
                     <div
                       style={{ width: `${progress}%` }}
-                      className="bg-ocher-200 dark:bg-gray-800 absolute bottom-0 left-0 h-2 w-10 rounded-lg duration-200"
+                      className="absolute bottom-0 left-0 h-2 w-10 rounded-lg bg-ocher-200 duration-200 dark:bg-gray-800"
                     />
                     <img src={image} alt="" />
                   </div>
@@ -92,7 +96,7 @@ const AboutMe = () => {
             </p>
           </div>
         </div>
-        <div className="laptop:w-2/3 laptop:max-w-full flex max-w-md flex-col justify-center rounded-sm border border-[rgba(0,0,0,.125)]">
+        <div className="flex max-w-md flex-col justify-center rounded-sm border border-[rgba(0,0,0,.125)] laptop:w-2/3 laptop:max-w-full">
           <div className="flex grow-0 items-center gap-3 border-b border-[rgba(0,0,0,.125)] bg-[rgba(0,0,0,0.03)] px-3 py-2">
             <Icon icon="emojione:red-circle" width={10} />
             <Icon icon="twemoji:yellow-circle" width={10} />

@@ -10,6 +10,8 @@ import { ProjectType } from "@/i18n/config";
 import Slider from "react-slick";
 import CustomArrow from "../slider/CustomArrow";
 
+type LazyLoadTypes = "ondemand" | "progressive" | "anticipated";
+
 interface DialogProps {
   open: boolean;
   onClose: () => void;
@@ -17,9 +19,11 @@ interface DialogProps {
 }
 
 const sliderSettings = {
+  lazyLoad: "progressive" as LazyLoadTypes,
   swipe: true,
   dots: true,
   speed: 500,
+  initialSlide: 1,
   arrows: true,
   infinite: true,
   slidesToShow: 1,
