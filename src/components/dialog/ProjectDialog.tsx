@@ -63,9 +63,9 @@ const ProjectDialog = ({ open, onClose, project }: DialogProps) => {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <DialogPanel className="relative transform overflow-hidden rounded-sm bg-white text-left transition-all sm:my-8 md:w-[800px] dark:bg-gray-400 dark:text-white">
-                <div className="flex justify-end">
-                  <div className="bg-red-100 mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full sm:mx-0 sm:h-10 sm:w-10">
+              <DialogPanel className="relative transform overflow-hidden rounded-sm bg-white text-left text-gray-900 transition-all sm:my-8 md:w-[800px] dark:bg-gray-400 dark:text-white">
+                <div className="mx-5 mt-5 flex justify-end">
+                  <div className="bg-red-100 rounded-hull mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full p-2 hover:bg-gray-100 sm:mx-0 sm:h-10 sm:w-10 dark:hover:bg-gray-500">
                     <Icon
                       icon="material-symbols:close"
                       className="cursor-pointer text-2xl"
@@ -102,7 +102,7 @@ const ProjectDialog = ({ open, onClose, project }: DialogProps) => {
 
                   <div className="mt-3 flex justify-center gap-5">
                     {project?.technologies?.map((tech) => (
-                      <div className="flex flex-col items-center text-gray-900 dark:text-white">
+                      <div className="flex flex-col items-center">
                         <Icon icon={tech.class} fontSize="50px" />
                         <p className="mt-1 text-center text-xs">{tech.name}</p>
                       </div>
@@ -114,7 +114,7 @@ const ProjectDialog = ({ open, onClose, project }: DialogProps) => {
                       href={project?.appLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex flex-col items-center rounded-full p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-500"
+                      className="flex flex-col items-center rounded-full p-2 hover:bg-gray-100 dark:hover:bg-gray-500"
                     >
                       <Icon icon="mdi:web" fontSize="40px" />
                     </a>
@@ -122,7 +122,7 @@ const ProjectDialog = ({ open, onClose, project }: DialogProps) => {
                       href={project?.repoLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex flex-col items-center rounded-full p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-500"
+                      className="flex flex-col items-center rounded-full p-2 hover:bg-gray-100 dark:hover:bg-gray-500"
                     >
                       <Icon icon="mdi:github" fontSize="40px" />
                     </a>
