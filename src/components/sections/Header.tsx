@@ -100,7 +100,7 @@ const HeaderMain = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="h-[80svh] min-h-[500px] w-full bg-ocher-200 pt-[10svh] text-gray-900 dark:bg-gray-800 dark:text-white">
+    <div className="flex h-[80svh] min-h-[500px] w-full flex-col items-center justify-center gap-5 bg-ocher-200 pt-[10svh] text-gray-900 dark:bg-gray-800 dark:text-white">
       <DevIcon />
       <Name name={t("basic_info.name")} />
       <SkillsAnimation
