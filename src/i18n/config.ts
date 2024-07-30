@@ -16,6 +16,12 @@ export const resources = {
 export type ProjectType =
   (typeof resources)["en"]["translation"]["projects"]["projects"][0];
 
+export type SkillType =
+  (typeof resources)["en"]["translation"]["skills"]["icons"][0];
+
+export type HistoryType =
+  (typeof resources)["en"]["translation"]["history"]["experiences"][0];
+
 i18next
   .use(LanguageDetector)
   .use(initReactI18next)
