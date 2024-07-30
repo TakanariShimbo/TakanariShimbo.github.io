@@ -1,8 +1,8 @@
-import { useBoolean } from "@/hooks";
-import ProjectDialog from "../dialog/ProjectDialog";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+import { useBoolean } from "@/hooks";
 import { ProjectType } from "@/i18n/config";
+import ProjectDialog from "../dialog/ProjectDialog";
 
 interface TitleProps {
   title: string;
@@ -30,7 +30,7 @@ const Main = ({ projects, handleProjectDetails }: MainProps) => {
           onClick={() => handleProjectDetails(item)}
           key={item.title}
         >
-          <span className="mb-3 rounded-t-lg bg-gray-500 px-4 pb-1 pt-2 text-center text-sm font-medium uppercase text-white">
+          <span className="mb-3 rounded-t-lg bg-gray-500 px-4 pb-1 pt-2 text-center text-sm font-medium uppercase text-white dark:bg-gray-800">
             {item.category}
           </span>
           <img

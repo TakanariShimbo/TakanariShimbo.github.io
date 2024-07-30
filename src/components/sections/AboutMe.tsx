@@ -6,10 +6,11 @@ import {
   useMemo,
   RefObject,
 } from "react";
-import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
-import CustomArrow from "../slider/CustomArrow";
+import { Icon } from "@iconify/react";
+import { useBoolean } from "@/hooks";
+import PhotoDialog from "../dialog/PhotoDialog";
 
 type LazyLoadTypes = "ondemand" | "progressive" | "anticipated";
 
@@ -29,7 +30,13 @@ interface MainProps {
   sliderRef: RefObject<Slider>;
   images: string[];
   progress: number;
-  resetProgress: () => void;
+  setIsOpen: {
+    on: () => void;
+    off: () => void;
+    toggle: () => void;
+  };
+  currentSlide: number;
+  setCurrentSlide: (index: number) => void;
   hobbyContent: string;
   workContent: string;
 }
@@ -38,7 +45,9 @@ const Main = ({
   sliderRef,
   images,
   progress,
-  resetProgress,
+  setIsOpen,
+  currentSlide,
+  setCurrentSlide,
   hobbyContent,
   workContent,
 }: MainProps) => {
@@ -51,26 +60,11 @@ const Main = ({
       dots: false,
       speed: 1500,
       initialSlide: 0,
-      arrows: true,
+      arrows: false,
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
-      prevArrow: (
-        <CustomArrow
-          direction="left"
-          beforeGradient={false}
-          afterGradient={true}
-          resetProgress={resetProgress}
-        />
-      ),
-      nextArrow: (
-        <CustomArrow
-          direction="right"
-          beforeGradient={false}
-          afterGradient={true}
-          resetProgress={resetProgress}
-        />
-      ),
+      beforeChange: (_: number, next: number) => setCurrentSlide(next),
     }),
     [],
   );
@@ -78,7 +72,14 @@ const Main = ({
   return (
     <div className="flex max-w-full flex-col place-items-stretch gap-10 laptop:max-w-[1160px] laptop:flex-row laptop:gap-5 laptop:pb-0">
       <div className="flex w-full max-w-md flex-col justify-center laptop:w-1/3">
-        <div className="p-4 text-center shadow-card">
+        <div
+          className="cursor-pointer p-4 text-center shadow-card transition duration-200 ease-linear hover:scale-105 hover:shadow-card-hover"
+          onClick={setIsOpen.on}
+        >
+          <div
+            style={{ width: `${progress}%` }}
+            className="left-0 mb-1 h-1 w-10 rounded bg-ocher-200 duration-200 dark:bg-gray-800"
+          />
           <Slider
             ref={sliderRef}
             {...sliderSettings}
@@ -86,16 +87,14 @@ const Main = ({
           >
             {images.map((image, index) => (
               <div key={index} className="w-full">
-                <div
-                  style={{ width: `${progress}%` }}
-                  className="absolute bottom-0 left-0 h-2 w-10 rounded-lg bg-ocher-200 duration-200 dark:bg-gray-800"
-                />
                 <img src={image} alt="Profile" />
               </div>
             ))}
           </Slider>
-          <p className="font-xl mt-2 font-medium tracking-wide dark:text-white">
+          <p className="font-xl font-medium tracking-wide dark:text-white">
             Photo Gallery
+            <br />
+            {currentSlide + 1} / {images.length}
           </p>
         </div>
       </div>
@@ -106,9 +105,11 @@ const Main = ({
           <Icon icon="twemoji:green-circle" width={10} />
         </div>
         <div className="flex grow flex-col justify-center p-3 text-justify">
+          <br />
           <p className="text-sm font-medium">{hobbyContent}</p>
           <br />
           <p className="text-sm font-medium">{workContent}</p>
+          <br />
         </div>
       </div>
     </div>
@@ -117,8 +118,10 @@ const Main = ({
 
 const AboutMe = () => {
   const { t } = useTranslation();
+  const [isOpen, setIsOpen] = useBoolean();
   const sliderRef = useRef<Slider>(null);
   const [progress, setProgress] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const resetProgress = useCallback(() => {
     setProgress(0);
@@ -149,9 +152,16 @@ const AboutMe = () => {
         sliderRef={sliderRef}
         images={t("about_me.images", { returnObjects: true })}
         progress={progress}
-        resetProgress={resetProgress}
+        setIsOpen={setIsOpen}
+        currentSlide={currentSlide}
+        setCurrentSlide={setCurrentSlide}
         hobbyContent={t("about_me.hobby_content")}
         workContent={t("about_me.work_content")}
+      />
+      <PhotoDialog
+        open={isOpen}
+        onClose={setIsOpen.off}
+        images={t("about_me.images", { returnObjects: true })}
       />
     </section>
   );
