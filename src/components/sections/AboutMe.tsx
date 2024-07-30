@@ -88,7 +88,7 @@ const Main = ({
             {images.map((image, index) => (
               <div key={index} className="w-full">
                 <img src={image} alt="Profile" />
-                <p className="absolute bottom-4 right-3 rounded-xl bg-gray-500 bg-opacity-25 px-2 tracking-wide text-white">
+                <p className="absolute bottom-4 right-3 rounded bg-gray-500 bg-opacity-25 p-1 text-xs tracking-wide text-white backdrop-blur-md">
                   {currentSlide + 1} / {images.length}
                 </p>
               </div>
