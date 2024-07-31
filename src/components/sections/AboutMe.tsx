@@ -11,6 +11,7 @@ import Slider from "react-slick";
 import { Icon } from "@iconify/react";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import { useBoolean } from "@/hooks";
+import CustomArrow from "../slider/CustomArrow";
 import PhotoDialog from "../dialog/PhotoDialog";
 
 type LazyLoadTypes = "ondemand" | "progressive" | "anticipated";
@@ -31,6 +32,7 @@ type MainProps = {
   sliderRef: RefObject<Slider>;
   images: string[];
   progress: number;
+  resetProgress: () => void;
   onOpenDialog: () => void;
   currentSlide: number;
   setCurrentSlide: (index: number) => void;
@@ -42,6 +44,7 @@ const Main = ({
   sliderRef,
   images,
   progress,
+  resetProgress,
   onOpenDialog,
   currentSlide,
   setCurrentSlide,
@@ -57,11 +60,27 @@ const Main = ({
       dots: false,
       speed: 1500,
       initialSlide: 0,
-      arrows: false,
+      arrows: true,
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       beforeChange: (_: number, next: number) => setCurrentSlide(next),
+      prevArrow: (
+        <CustomArrow
+          direction="left"
+          beforeGradient={false}
+          afterGradient={true}
+          resetProgress={resetProgress}
+        />
+      ),
+      nextArrow: (
+        <CustomArrow
+          direction="right"
+          beforeGradient={false}
+          afterGradient={true}
+          resetProgress={resetProgress}
+        />
+      ),
     }),
     [],
   );
@@ -69,10 +88,7 @@ const Main = ({
   return (
     <div className="flex max-w-full flex-col place-items-stretch gap-10 laptop:max-w-[1160px] laptop:flex-row laptop:gap-5 laptop:pb-0">
       <div className="flex w-full max-w-md flex-col justify-center laptop:w-1/3">
-        <div
-          className="cursor-pointer p-4 text-center shadow-card transition duration-200 ease-linear hover:scale-105 hover:shadow-card-hover"
-          onClick={onOpenDialog}
-        >
+        <div className="p-4 text-center shadow-card">
           <div
             style={{ width: `${progress}%` }}
             className="left-0 mb-1 h-1 w-10 rounded bg-ocher-200 duration-200 dark:bg-gray-800"
@@ -91,9 +107,15 @@ const Main = ({
               </div>
             ))}
           </Slider>
-          <p className="font-xl font-medium tracking-wide dark:text-white">
-            Photo Gallery
-          </p>
+          <button
+            className="rounded-3xl px-4 py-2 font-medium tracking-wide hover:bg-gray-100 active:bg-gray-100 dark:text-white dark:hover:bg-gray-500 dark:active:bg-gray-500"
+            onClick={onOpenDialog}
+          >
+            <div className="flex flex-row items-center justify-center">
+              <span className="px-1">Photo Gallery</span>
+              <Icon icon="basil:arrow-right-outline" fontSize="24px" />
+            </div>
+          </button>
         </div>
       </div>
       <div className="flex max-w-md flex-col justify-center rounded-sm border border-[rgba(0,0,0,.125)] laptop:w-2/3 laptop:max-w-full">
@@ -160,6 +182,7 @@ const AboutMe = () => {
         sliderRef={sliderRef}
         images={t("about_me.images", { returnObjects: true })}
         progress={progress}
+        resetProgress={resetProgress}
         onOpenDialog={onOpenDialog}
         currentSlide={currentSlide}
         setCurrentSlide={setCurrentSlide}

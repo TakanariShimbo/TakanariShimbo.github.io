@@ -39,7 +39,7 @@ const Main = ({ projects, onOpenDialog }: MainProps) => {
             src={item.images[1]}
             alt="Project"
           />
-          <p className="font-xl mt-2 font-medium tracking-wide">{item.title}</p>
+          <p className="font-xl mt-3 font-medium tracking-wide">{item.title}</p>
         </div>
       ))}
     </div>

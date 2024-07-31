@@ -85,7 +85,7 @@ type FlagIconProps = {
 const FlagIcon = ({ lang, currentLang, icon, onClick }: FlagIconProps) => (
   <Icon
     className={clsx(
-      "h-full cursor-pointer text-[50px]",
+      "h-full cursor-pointer text-[50px] hover:brightness-75",
       currentLang === lang && "brightness-50",
     )}
     icon={icon}
