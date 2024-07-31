@@ -6,9 +6,9 @@ import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
 import { HistoryType } from "@/i18n/config";
 
-interface BadgeProps {
+type BadgeProps = {
   text: string;
-}
+};
 
 const Badge = ({ text }: BadgeProps) => (
   <span className="rounded-xl bg-ocher-200 px-1.5 py-0.5 text-sm text-gray-900 dark:bg-gray-400 dark:text-white">
@@ -16,9 +16,9 @@ const Badge = ({ text }: BadgeProps) => (
   </span>
 );
 
-interface TitleProps {
+type TitleProps = {
   title: string;
-}
+};
 
 const Title = ({ title }: TitleProps) => {
   return (
@@ -28,9 +28,9 @@ const Title = ({ title }: TitleProps) => {
   );
 };
 
-interface MainProps {
+type MainProps = {
   historys: HistoryType[];
-}
+};
 
 const Main = ({ historys }: MainProps) => {
   return (

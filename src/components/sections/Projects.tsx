@@ -2,11 +2,12 @@ import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { useBoolean } from "@/hooks";
 import { ProjectType } from "@/i18n/config";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import ProjectDialog from "../dialog/ProjectDialog";
 
-interface TitleProps {
+type TitleProps = {
   title: string;
-}
+};
 
 const Title = ({ title }: TitleProps) => {
   return (
@@ -16,18 +17,18 @@ const Title = ({ title }: TitleProps) => {
   );
 };
 
-interface MainProps {
+type MainProps = {
   projects: ProjectType[];
-  handleProjectDetails: (project: ProjectType) => void;
-}
+  onOpenDialog: (project: ProjectType) => void;
+};
 
-const Main = ({ projects, handleProjectDetails }: MainProps) => {
+const Main = ({ projects, onOpenDialog }: MainProps) => {
   return (
     <div className="flex flex-wrap justify-center gap-10 laptop:gap-5">
       {projects.map((item) => (
         <div
           className="inline-block cursor-pointer bg-white p-4 text-center shadow-card transition duration-200 ease-linear hover:scale-105 hover:shadow-card-hover dark:bg-gray-500"
-          onClick={() => handleProjectDetails(item)}
+          onClick={() => onOpenDialog(item)}
           key={item.title}
         >
           <span className="mb-3 rounded-t-lg bg-gray-500 px-4 pb-1 pt-2 text-center text-sm font-medium uppercase text-white dark:bg-gray-800">
@@ -46,15 +47,21 @@ const Main = ({ projects, handleProjectDetails }: MainProps) => {
 };
 
 const Projects = () => {
-  const [isOpen, setIsOpen] = useBoolean();
+  const [isOpen, handleIsOpen] = useBoolean();
   const [selectedProject, setSelectedProject] = useState<
     ProjectType | undefined
   >();
   const { t } = useTranslation();
 
-  const handleProjectDetails = (project: ProjectType) => {
+  const onOpenDialog = (project: ProjectType) => {
     setSelectedProject(project);
-    setIsOpen.on();
+    handleIsOpen.on();
+    disableBodyScroll(document.body);
+  };
+
+  const onCloseDialog = () => {
+    handleIsOpen.off();
+    enableBodyScroll(document.body);
   };
 
   return (
@@ -65,11 +72,11 @@ const Projects = () => {
       <Title title={t("projects.title")} />
       <Main
         projects={t("projects.projects", { returnObjects: true })}
-        handleProjectDetails={handleProjectDetails}
+        onOpenDialog={onOpenDialog}
       />
       <ProjectDialog
         open={isOpen}
-        onClose={setIsOpen.off}
+        onClose={onCloseDialog}
         project={selectedProject}
       />
     </section>

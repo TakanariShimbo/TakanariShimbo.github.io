@@ -20,17 +20,17 @@ const DevIcon = () => {
   );
 };
 
-interface NameProps {
+type NameProps = {
   name: string;
-}
+};
 
 const Name = ({ name }: NameProps) => {
   return <h1 className="text-4xl font-bold">{name}</h1>;
 };
 
-interface SkillsAnimationProps {
+type SkillsAnimationProps = {
   skills: string[];
-}
+};
 
 const SkillsAnimation = ({ skills }: SkillsAnimationProps) => {
   return (
@@ -44,10 +44,10 @@ const SkillsAnimation = ({ skills }: SkillsAnimationProps) => {
   );
 };
 
-interface ThemeSwitchProps {
+type ThemeSwitchProps = {
   darkTheme: boolean;
   toggleTheme: () => void;
-}
+};
 
 const ThemeSwitch = ({ darkTheme, toggleTheme }: ThemeSwitchProps) => {
   return (
@@ -75,12 +75,12 @@ const ThemeSwitch = ({ darkTheme, toggleTheme }: ThemeSwitchProps) => {
   );
 };
 
-interface FlagIconProps {
+type FlagIconProps = {
   lang: string;
   currentLang: string;
   icon: string;
   onClick: () => void;
-}
+};
 
 const FlagIcon = ({ lang, currentLang, icon, onClick }: FlagIconProps) => (
   <Icon

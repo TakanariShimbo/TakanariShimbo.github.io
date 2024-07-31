@@ -4,7 +4,7 @@ type InitialState = boolean | (() => boolean);
 
 export function useBoolean(initialState: InitialState = false) {
   const [value, setValue] = useState(initialState);
-  const callbacks = useMemo(
+  const handleValue = useMemo(
     () => ({
       on: () => setValue(true),
       off: () => setValue(false),
@@ -12,5 +12,5 @@ export function useBoolean(initialState: InitialState = false) {
     }),
     [],
   );
-  return [value, callbacks] as const;
+  return [value, handleValue] as const;
 }

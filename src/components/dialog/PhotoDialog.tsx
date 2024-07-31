@@ -1,8 +1,8 @@
 import GenericDialog from "./GenericDialog";
 
-interface ContentsProps {
+type ContentsProps = {
   images: string[];
-}
+};
 
 const Contents = ({ images }: ContentsProps) => {
   return (
@@ -24,11 +24,11 @@ const Contents = ({ images }: ContentsProps) => {
   );
 };
 
-interface PhotoDialogProps {
+type PhotoDialogProps = {
   open: boolean;
   onClose: () => void;
   images: string[];
-}
+};
 
 const PhotoDialog = ({ open, onClose, images }: PhotoDialogProps) => {
   return (

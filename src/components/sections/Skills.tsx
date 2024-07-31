@@ -2,9 +2,9 @@ import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
 import { SkillType } from "@/i18n/config";
 
-interface TitleProps {
+type TitleProps = {
   title: string;
-}
+};
 
 const Title = ({ title }: TitleProps) => {
   return (
@@ -14,9 +14,9 @@ const Title = ({ title }: TitleProps) => {
   );
 };
 
-interface MainProps {
+type MainProps = {
   skills: SkillType[];
-}
+};
 
 const Main = ({ skills }: MainProps) => {
   return (

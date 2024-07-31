@@ -1,12 +1,12 @@
 import { Icon } from "@iconify/react";
 
-interface ArrowProps {
+type ArrowProps = {
   direction: "left" | "right";
   beforeGradient: boolean;
   afterGradient: boolean;
   onClick?: () => void;
   resetProgress?: () => void;
-}
+};
 
 const CustomArrow = ({
   direction,

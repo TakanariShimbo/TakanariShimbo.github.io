@@ -7,12 +7,12 @@ import {
 } from "@headlessui/react";
 import { Icon } from "@iconify/react";
 
-interface GenericDialogProps {
+type GenericDialogProps = {
   open: boolean;
   onClose: () => void;
   children: ReactNode;
   maxWidth?: string;
-}
+};
 
 const GenericDialog = ({
   open,

@@ -1,11 +1,11 @@
-import { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+import { useBoolean } from "@/hooks";
 
-interface NavLink {
+type NavLink = {
   to: string;
   label: string;
-}
+};
 
 const navLinks = [
   { to: "home", label: "HOME" },
@@ -46,9 +46,9 @@ const GithubLink = () => {
   );
 };
 
-interface PcMenuProps {
+type PcMenuProps = {
   navLinks: NavLink[];
-}
+};
 
 const PcMenu = ({ navLinks }: PcMenuProps) => {
   return (
@@ -73,17 +73,13 @@ const PcMenu = ({ navLinks }: PcMenuProps) => {
   );
 };
 
-interface SmartMenuProps {
+type SmartMenuProps = {
   navLinks: NavLink[];
-  openMenu: boolean;
+  isOpen: boolean;
   handleMenuToggle: () => void;
-}
+};
 
-const SmartMenu = ({
-  navLinks,
-  openMenu,
-  handleMenuToggle,
-}: SmartMenuProps) => {
+const SmartMenu = ({ navLinks, isOpen, handleMenuToggle }: SmartMenuProps) => {
   return (
     <div className="visible h-full w-full laptop:invisible">
       <div className="absolute right-0 top-0">
@@ -94,21 +90,21 @@ const SmartMenu = ({
         >
           <div
             className={
-              openMenu
+              isOpen
                 ? "h-0.5 w-8 translate-y-2.5 rotate-45 bg-white transition duration-500 ease-in-out"
                 : "h-0.5 w-8 bg-white transition duration-500 ease-in-out"
             }
           />
           <div
             className={
-              openMenu
+              isOpen
                 ? "opacity-0 transition duration-500 ease-in-out"
                 : "h-0.5 w-8 bg-white transition duration-500 ease-in-out"
             }
           />
           <div
             className={
-              openMenu
+              isOpen
                 ? "h-0.5 w-8 -rotate-45 bg-white transition duration-500 ease-in-out"
                 : "h-0.5 w-8 bg-white transition duration-500 ease-in-out"
             }
@@ -117,7 +113,7 @@ const SmartMenu = ({
       </div>
       <div
         className={`fixed right-0 top-0 flex h-full min-h-screen w-full flex-col items-stretch justify-center bg-gray-950 bg-opacity-85 p-5 text-center text-white backdrop-blur-md transition-transform ease-linear ${
-          openMenu
+          isOpen
             ? "translate-y-0 duration-300"
             : "-translate-y-full duration-100"
         }`}
@@ -151,11 +147,11 @@ const SmartMenu = ({
 };
 
 const Menu = () => {
-  const [openMenu, setOpenMenu] = useState(false);
+  const [isOpen, handleIsOpen] = useBoolean(false);
 
   const handleMenuToggle = () => {
-    setOpenMenu(!openMenu);
-    if (!openMenu) {
+    handleIsOpen.toggle();
+    if (!isOpen) {
       disableBodyScroll(document.body);
     } else {
       enableBodyScroll(document.body);
@@ -168,7 +164,7 @@ const Menu = () => {
       <PcMenu navLinks={navLinks} />
       <SmartMenu
         navLinks={navLinks}
-        openMenu={openMenu}
+        isOpen={isOpen}
         handleMenuToggle={handleMenuToggle}
       />
     </nav>

@@ -9,14 +9,15 @@ import {
 import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 import { Icon } from "@iconify/react";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import { useBoolean } from "@/hooks";
 import PhotoDialog from "../dialog/PhotoDialog";
 
 type LazyLoadTypes = "ondemand" | "progressive" | "anticipated";
 
-interface TitleProps {
+type TitleProps = {
   title: string;
-}
+};
 
 const Title = ({ title }: TitleProps) => {
   return (
@@ -26,26 +27,22 @@ const Title = ({ title }: TitleProps) => {
   );
 };
 
-interface MainProps {
+type MainProps = {
   sliderRef: RefObject<Slider>;
   images: string[];
   progress: number;
-  setIsOpen: {
-    on: () => void;
-    off: () => void;
-    toggle: () => void;
-  };
+  onOpenDialog: () => void;
   currentSlide: number;
   setCurrentSlide: (index: number) => void;
   hobbyContent: string;
   workContent: string;
-}
+};
 
 const Main = ({
   sliderRef,
   images,
   progress,
-  setIsOpen,
+  onOpenDialog,
   currentSlide,
   setCurrentSlide,
   hobbyContent,
@@ -74,7 +71,7 @@ const Main = ({
       <div className="flex w-full max-w-md flex-col justify-center laptop:w-1/3">
         <div
           className="cursor-pointer p-4 text-center shadow-card transition duration-200 ease-linear hover:scale-105 hover:shadow-card-hover"
-          onClick={setIsOpen.on}
+          onClick={onOpenDialog}
         >
           <div
             style={{ width: `${progress}%` }}
@@ -119,7 +116,7 @@ const Main = ({
 
 const AboutMe = () => {
   const { t } = useTranslation();
-  const [isOpen, setIsOpen] = useBoolean();
+  const [isOpen, handleIsOpen] = useBoolean();
   const sliderRef = useRef<Slider>(null);
   const [progress, setProgress] = useState(0);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -143,6 +140,16 @@ const AboutMe = () => {
     return () => clearInterval(timer);
   }, []);
 
+  const onOpenDialog = () => {
+    handleIsOpen.on();
+    disableBodyScroll(document.body);
+  };
+
+  const onCloseDialog = () => {
+    handleIsOpen.off();
+    enableBodyScroll(document.body);
+  };
+
   return (
     <section
       id="about-me"
@@ -153,7 +160,7 @@ const AboutMe = () => {
         sliderRef={sliderRef}
         images={t("about_me.images", { returnObjects: true })}
         progress={progress}
-        setIsOpen={setIsOpen}
+        onOpenDialog={onOpenDialog}
         currentSlide={currentSlide}
         setCurrentSlide={setCurrentSlide}
         hobbyContent={t("about_me.hobby_content")}
@@ -161,7 +168,7 @@ const AboutMe = () => {
       />
       <PhotoDialog
         open={isOpen}
-        onClose={setIsOpen.off}
+        onClose={onCloseDialog}
         images={t("about_me.images", { returnObjects: true })}
       />
     </section>

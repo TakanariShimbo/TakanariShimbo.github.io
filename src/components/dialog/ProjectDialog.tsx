@@ -24,9 +24,9 @@ const sliderSettings = {
   ),
 };
 
-interface ContentsProps {
+type ContentsProps = {
   project?: ProjectType;
-}
+};
 
 const Contents = ({ project }: ContentsProps) => {
   return (
@@ -82,11 +82,11 @@ const Contents = ({ project }: ContentsProps) => {
   );
 };
 
-interface ProjectDialogProps {
+type ProjectDialogProps = {
   open: boolean;
   onClose: () => void;
   project?: ProjectType;
-}
+};
 
 const ProjectDialog = ({ open, onClose, project }: ProjectDialogProps) => {
   return (
