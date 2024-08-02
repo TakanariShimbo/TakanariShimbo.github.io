@@ -14,14 +14,14 @@
     "hobby_content": "　新保貴也です。1995年、新潟生まれの29歳です。趣味は、スポーツをすることや音楽鑑賞、動画鑑賞、それから写真撮影です。好きなスポーツは、野球、テニス、卓球、バドミントンです。音楽は、GRe4N BOYZ、Mrs. GREEN APPLE、宇多田ヒカル、Perfume の曲をよく聴きます。動画は、ONE PIECE、SPY×FAMILY、ハイキュー!!、MAJOR、ピンポン等のアニメや、細田守、新海誠、ジブリ作のアニメ映画が特に好きです。",
     "work_content": "　職場では、AIやDXを推進するチームを牽引しており、機械学習や最適化を活用した社内の生産設備や業務用アプリを開発しています。機械学習では、テーブルデータや画像データを入力とするクラス分類や回帰、異常検知等のタスクを扱っています。また、近年話題の生成AIを用いたアプリも開発しています。他にも、データドリブンでない最適化AIを用いることで、業務プロセスの効率化を推進しています。",
     "images": [
+      "images/profile/p29.jpg",
+      "images/profile/p30.jpg",
+      "images/profile/p31.jpg",
+      "images/profile/p32.jpg",
+      "images/profile/p33.jpg",
+      "images/profile/p34.jpg",
+      "images/profile/p35.jpg",
       "images/profile/p1.jpg",
-      "images/profile/p21.jpg",
-      "images/profile/p22.jpg",
-      "images/profile/p23.jpg",
-      "images/profile/p24.jpg",
-      "images/profile/p25.jpg",
-      "images/profile/p26.jpg",
-      "images/profile/p27.jpg",
       "images/profile/p2.jpg",
       "images/profile/p3.jpg",
       "images/profile/p4.jpg",
@@ -40,7 +40,15 @@
       "images/profile/p17.jpg",
       "images/profile/p18.jpg",
       "images/profile/p19.jpg",
-      "images/profile/p20.jpg"
+      "images/profile/p20.jpg",
+      "images/profile/p21.jpg",
+      "images/profile/p22.jpg",
+      "images/profile/p23.jpg",
+      "images/profile/p24.jpg",
+      "images/profile/p25.jpg",
+      "images/profile/p26.jpg",
+      "images/profile/p27.jpg",
+      "images/profile/p28.jpg"
     ]
   },
   "projects": {
